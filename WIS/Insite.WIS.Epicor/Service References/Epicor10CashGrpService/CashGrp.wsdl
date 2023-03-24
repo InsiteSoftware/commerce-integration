@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Erp:BO:CashGrp" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Erp:BO:CashGrp" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Erp:BO:CashGrp/Imports">
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd0" namespace="Erp:BO:CashGrp" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Ice.Common" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Epicor.Data" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CashGrpSvcContract_GetNewCashGrp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashGrp" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetNewCashGrp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashGrpResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetNewCashGrp_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q1:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_DeleteByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteByID" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_DeleteByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_DeleteByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q2:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByID" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q3:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetList" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetList_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q4:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRows" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetRows_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q5:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetBySysRowID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowID" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetBySysRowID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetBySysRowID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q6:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetBySysRowIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDs" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetBySysRowIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetBySysRowIDs_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q7:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_Update_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q8:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_UpdateExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExt" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_UpdateExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_UpdateExt_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q9:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetCodeDescList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCodeDescList" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetCodeDescList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCodeDescListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetCodeDescList_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q10:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_BeforeGetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BeforeGetByID" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_BeforeGetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BeforeGetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_BeforeGetByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q11:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_DeleteZeroAmtTaxRec_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteZeroAmtTaxRec" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_DeleteZeroAmtTaxRec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteZeroAmtTaxRecResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_DeleteZeroAmtTaxRec_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q12:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetGrpBankInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGrpBankInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetGrpBankInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGrpBankInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetGrpBankInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q13:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetGrpFiscal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGrpFiscal" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetGrpFiscal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGrpFiscalResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetGrpFiscal_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q14:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetNewCashGrpForPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashGrpForPI" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetNewCashGrpForPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashGrpForPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetNewCashGrpForPI_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q15:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetNewCashGrpForPIStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashGrpForPIStatus" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetNewCashGrpForPIStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashGrpForPIStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetNewCashGrpForPIStatus_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q16:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetPIGroupByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPIGroupByID" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetPIGroupByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPIGroupByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetPIGroupByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q17:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetPIStatusGroupByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPIStatusGroupByID" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetPIStatusGroupByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPIStatusGroupByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_GetPIStatusGroupByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q18:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_LeaveCashGrp_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveCashGrp" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_LeaveCashGrp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveCashGrpResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_LeaveCashGrp_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q19:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_PrePostEPGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrePostEPGroup" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_PrePostEPGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrePostEPGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_PrePostEPGroup_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q20:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_PrePostGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrePostGroup" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_PrePostGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrePostGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashGrpSvcContract_PrePostGroup_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q21:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:portType name="CashGrpSvcContract">
+    <wsdl:operation name="GetNewCashGrp">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetNewCashGrp" message="tns:CashGrpSvcContract_GetNewCashGrp_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetNewCashGrpResponse" message="tns:CashGrpSvcContract_GetNewCashGrp_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetNewCashGrpEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetNewCashGrp_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByID">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/DeleteByID" message="tns:CashGrpSvcContract_DeleteByID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/DeleteByIDResponse" message="tns:CashGrpSvcContract_DeleteByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/DeleteByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_DeleteByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetByID" message="tns:CashGrpSvcContract_GetByID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetByIDResponse" message="tns:CashGrpSvcContract_GetByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetList" message="tns:CashGrpSvcContract_GetList_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetListResponse" message="tns:CashGrpSvcContract_GetList_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetListEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetList_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetRows" message="tns:CashGrpSvcContract_GetRows_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetRowsResponse" message="tns:CashGrpSvcContract_GetRows_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetRowsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetRows_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowID">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetBySysRowID" message="tns:CashGrpSvcContract_GetBySysRowID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetBySysRowIDResponse" message="tns:CashGrpSvcContract_GetBySysRowID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetBySysRowIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetBySysRowID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowIDs">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetBySysRowIDs" message="tns:CashGrpSvcContract_GetBySysRowIDs_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetBySysRowIDsResponse" message="tns:CashGrpSvcContract_GetBySysRowIDs_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetBySysRowIDsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetBySysRowIDs_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/Update" message="tns:CashGrpSvcContract_Update_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/UpdateResponse" message="tns:CashGrpSvcContract_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/UpdateEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_Update_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExt">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/UpdateExt" message="tns:CashGrpSvcContract_UpdateExt_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/UpdateExtResponse" message="tns:CashGrpSvcContract_UpdateExt_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/UpdateExtEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_UpdateExt_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescList">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetCodeDescList" message="tns:CashGrpSvcContract_GetCodeDescList_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetCodeDescListResponse" message="tns:CashGrpSvcContract_GetCodeDescList_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetCodeDescListEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetCodeDescList_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BeforeGetByID">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/BeforeGetByID" message="tns:CashGrpSvcContract_BeforeGetByID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/BeforeGetByIDResponse" message="tns:CashGrpSvcContract_BeforeGetByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/BeforeGetByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_BeforeGetByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteZeroAmtTaxRec">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/DeleteZeroAmtTaxRec" message="tns:CashGrpSvcContract_DeleteZeroAmtTaxRec_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/DeleteZeroAmtTaxRecResponse" message="tns:CashGrpSvcContract_DeleteZeroAmtTaxRec_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/DeleteZeroAmtTaxRecEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_DeleteZeroAmtTaxRec_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGrpBankInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetGrpBankInfo" message="tns:CashGrpSvcContract_GetGrpBankInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetGrpBankInfoResponse" message="tns:CashGrpSvcContract_GetGrpBankInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetGrpBankInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetGrpBankInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGrpFiscal">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetGrpFiscal" message="tns:CashGrpSvcContract_GetGrpFiscal_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetGrpFiscalResponse" message="tns:CashGrpSvcContract_GetGrpFiscal_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetGrpFiscalEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetGrpFiscal_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCashGrpForPI">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetNewCashGrpForPI" message="tns:CashGrpSvcContract_GetNewCashGrpForPI_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetNewCashGrpForPIResponse" message="tns:CashGrpSvcContract_GetNewCashGrpForPI_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetNewCashGrpForPIEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetNewCashGrpForPI_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCashGrpForPIStatus">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetNewCashGrpForPIStatus" message="tns:CashGrpSvcContract_GetNewCashGrpForPIStatus_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetNewCashGrpForPIStatusResponse" message="tns:CashGrpSvcContract_GetNewCashGrpForPIStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetNewCashGrpForPIStatusEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetNewCashGrpForPIStatus_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPIGroupByID">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetPIGroupByID" message="tns:CashGrpSvcContract_GetPIGroupByID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetPIGroupByIDResponse" message="tns:CashGrpSvcContract_GetPIGroupByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetPIGroupByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetPIGroupByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPIStatusGroupByID">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetPIStatusGroupByID" message="tns:CashGrpSvcContract_GetPIStatusGroupByID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetPIStatusGroupByIDResponse" message="tns:CashGrpSvcContract_GetPIStatusGroupByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/GetPIStatusGroupByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_GetPIStatusGroupByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeaveCashGrp">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/LeaveCashGrp" message="tns:CashGrpSvcContract_LeaveCashGrp_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/LeaveCashGrpResponse" message="tns:CashGrpSvcContract_LeaveCashGrp_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/LeaveCashGrpEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_LeaveCashGrp_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrePostEPGroup">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/PrePostEPGroup" message="tns:CashGrpSvcContract_PrePostEPGroup_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/PrePostEPGroupResponse" message="tns:CashGrpSvcContract_PrePostEPGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/PrePostEPGroupEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_PrePostEPGroup_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrePostGroup">
+      <wsdl:input wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/PrePostGroup" message="tns:CashGrpSvcContract_PrePostGroup_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/PrePostGroupResponse" message="tns:CashGrpSvcContract_PrePostGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashGrp/CashGrpSvcContract/PrePostGroupEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashGrpSvcContract_PrePostGroup_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

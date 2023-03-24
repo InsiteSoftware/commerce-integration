@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" />
+    <ProjectReference Include="..\..\Insite.Common\Insite.Common.csproj" />
+    <ProjectReference Include="..\Insite.Integration.WebService\Insite.Integration.WebService.csproj" />
+    <ProjectReference Include="..\Insite.Integration\Insite.Integration.csproj" />
+    <ProjectReference Include="..\Insite.WIS.Broker\Insite.WIS.Broker.csproj" />
+  </ItemGroup>
+</Project>

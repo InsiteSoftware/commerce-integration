@@ -1,0 +1,119 @@
+﻿<NewDataSet>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+            <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="ProductLookup">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="ErpNumber" type="xs:string" />                <xs:element name="ProductId" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>          <xs:element name="CustomerLookup">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="ErpNumber" type="xs:string" />                <xs:element name="ErpSequence" type="xs:string" />                <xs:element name="CustomerId" type="xs:string" minOccurs="0" />                <xs:element name="CurrencyCode" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>          <xs:element name="MiscLookup">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="Name" type="xs:string" />                <xs:element name="Value" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+                <xs:selector xpath=".//ProductLookup" />        <xs:field xpath="ErpNumber" />
+      </xs:unique>      <xs:unique name="CustomerLookup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+                <xs:selector xpath=".//CustomerLookup" />        <xs:field xpath="ErpNumber" />        <xs:field xpath="ErpSequence" />
+      </xs:unique>      <xs:unique name="MiscLookup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+                <xs:selector xpath=".//MiscLookup" />        <xs:field xpath="Name" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>  <ProductLookup>
+        <ErpNumber>BasicProduct_100</ErpNumber>    <ProductId>718dbedf-7fac-4802-adfc-a64b01192f5f</ProductId>
+  </ProductLookup>  <ProductLookup>
+        <ErpNumber>111</ErpNumber>    <ProductId>7a464940-e86e-4fc1-af37-a67200d2612a</ProductId>
+  </ProductLookup>  <ProductLookup>
+        <ErpNumber>ProductWithReplacement</ErpNumber>    <ProductId>c8bc0eca-8763-476d-b7f9-a708013d92b0</ProductId>
+  </ProductLookup>  <ProductLookup>
+        <ErpNumber>AutoCorrect1</ErpNumber>    <ProductId>b0dbfb5c-6b8d-465a-8c77-a80f00e891c4</ProductId>
+  </ProductLookup>  <ProductLookup>
+        <ErpNumber>AutoCorrect2</ErpNumber>    <ProductId>9a8ccf61-5b55-4b39-8183-a80f00e89e54</ProductId>
+  </ProductLookup>  <ProductLookup>
+        <ErpNumber>AutoCorrect3</ErpNumber>    <ProductId>48d08570-8b54-4fcd-90a5-a80f00e8a733</ProductId>
+  </ProductLookup>  <ProductLookup>
+        <ErpNumber>ProductWithReplacementOfOneQtyAvailable</ErpNumber>    <ProductId>addb9a2c-10db-4b92-a0e6-aa01011759f5</ProductId>
+  </ProductLookup>  <ProductLookup>
+        <ErpNumber>ABC12345678</ErpNumber>    <ProductId>623fb2f1-36fe-4324-b649-aa260080e300</ProductId>
+  </ProductLookup>  <CustomerLookup>
+        <ErpNumber>WEB001000</ErpNumber>    <ErpSequence />    <CustomerId>6301d771-7660-4958-bca2-a62b00f6f455</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>DynamicDisplayBasicTest</ErpNumber>    <ErpSequence>1</ErpSequence>    <CustomerId>48106a1e-6200-4b47-83da-a62b0167407b</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>DynamicDisplayIncludesCurrentValue</ErpNumber>    <ErpSequence>1</ErpSequence>    <CustomerId>49a865dd-2c94-456f-9220-a62c00e9d20f</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>DynamicGridTester001</ErpNumber>    <ErpSequence />    <CustomerId>d51180cb-70ea-4edc-b488-a62e0123c3f8</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>DynamicGridTester001-2</ErpNumber>    <ErpSequence />    <CustomerId>6ae4f4f4-3261-4da6-96a8-a62e0123dc51</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>DynamicGridTester105</ErpNumber>    <ErpSequence />    <CustomerId>1d7040a5-f123-4827-b44f-a62e0123f618</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>DynamicGridTester005</ErpNumber>    <ErpSequence />    <CustomerId>d6c82654-fc2b-4467-a713-a62e0124220a</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001001</ErpNumber>    <ErpSequence />    <CustomerId>2a0d80de-bdf3-4bc4-a6c5-a667014baf96</CustomerId>    <CurrencyCode>USD</CurrencyCode>
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001002</ErpNumber>    <ErpSequence />    <CustomerId>4122fa1d-98cc-4773-81a2-a6670155e690</CustomerId>    <CurrencyCode>USD</CurrencyCode>
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>ERP001000</ErpNumber>    <ErpSequence />    <CustomerId>d81bd0e3-ee95-4d04-addb-a67a0145a751</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001003</ErpNumber>    <ErpSequence />    <CustomerId>d429cdad-ccea-4fb5-a9dd-a6ac01309d67</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001004</ErpNumber>    <ErpSequence />    <CustomerId>467500a3-41e2-47d8-a88d-a6ac0132a741</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001005</ErpNumber>    <ErpSequence />    <CustomerId>ae8d80fa-d924-432f-b928-a6ac0132a83c</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001006</ErpNumber>    <ErpSequence />    <CustomerId>b803bf93-6ddd-44f6-8396-a6ac0132a848</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001007</ErpNumber>    <ErpSequence />    <CustomerId>276e4979-a4d5-4db6-8c36-a6ac0132a852</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001008</ErpNumber>    <ErpSequence />    <CustomerId>34e9fa06-7dad-4f3f-9bc7-a6d500ceae31</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001009</ErpNumber>    <ErpSequence />    <CustomerId>c4536195-1a4b-4190-ab67-a6d60132d147</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>CustomerWithDefaultShippingService</ErpNumber>    <ErpSequence />    <CustomerId>7c404544-fc38-44f7-b9ab-a6f800d6b3f1</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>Double'Quote'InCustomerNumber</ErpNumber>    <ErpSequence>Double'Quote'InCustomerNumber</ErpSequence>    <CustomerId>5ea0920f-77a3-4679-a438-a6fd0113bed8</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001010</ErpNumber>    <ErpSequence>WEB001010</ErpSequence>    <CustomerId>30d64143-cd63-48fc-a528-a70800fb32f0</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001010</ErpNumber>    <ErpSequence />    <CustomerId>840a0e5f-e271-47d0-b62b-a7080110cbb7</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>CustomerWithCurrencyEuro</ErpNumber>    <ErpSequence />    <CustomerId>f4430c66-9117-48a0-97a6-a72100c81919</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001011</ErpNumber>    <ErpSequence />    <CustomerId>225c8593-a5ef-4a95-b6aa-a729011de005</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001012</ErpNumber>    <ErpSequence />    <CustomerId>017c6fac-4126-42af-9119-a74500dfd40b</CustomerId>    <CurrencyCode>USD</CurrencyCode>
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>00</ErpNumber>    <ErpSequence>00</ErpSequence>    <CustomerId>e651a5a7-e435-412d-b68f-a75c00fad07d</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>01</ErpNumber>    <ErpSequence>01</ErpSequence>    <CustomerId>7c1ee8b1-f850-4b1a-8882-a75c00fae7c6</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>OrdersApiTests</ErpNumber>    <ErpSequence />    <CustomerId>d2d3e01b-e3c7-451b-affb-a818014eef2f</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>ErpCustomerForInvoiceApiTests</ErpNumber>    <ErpSequence />    <CustomerId>a33de6f8-e5a5-4f4a-9d13-a8770107f6c5</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001014</ErpNumber>    <ErpSequence />    <CustomerId>bcc46365-5b27-465c-91de-a87b0133d401</CustomerId>    <CurrencyCode>USD</CurrencyCode>
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>CustomerForShipToTests</ErpNumber>    <ErpSequence />    <CustomerId>686ef1f6-5915-4f97-b99a-a8e000d2f3ae</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>WEB001017</ErpNumber>    <ErpSequence />    <CustomerId>69107f11-b57c-4538-9f15-a9c4016c2e6c</CustomerId>    <CurrencyCode>USD</CurrencyCode>
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>CustomerDefaultCreditCard</ErpNumber>    <ErpSequence />    <CustomerId>aa0307f9-174f-4969-83c1-adcc008e5ea4</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <CustomerLookup>
+        <ErpNumber>CustomerDefaultPurchaseOrder</ErpNumber>    <ErpSequence />    <CustomerId>3e5d9648-2562-46ad-803e-adcc008e9dfb</CustomerId>    <CurrencyCode />
+  </CustomerLookup>  <MiscLookup>
+        <Name>IntegrationUserProfileId</Name>    <Value />
+  </MiscLookup>
+</NewDataSet>

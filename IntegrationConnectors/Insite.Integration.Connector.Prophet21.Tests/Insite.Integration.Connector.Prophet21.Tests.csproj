@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Insite.Core.Interfaces\Insite.Core.Interfaces.csproj" />
+    <ProjectReference Include="..\..\..\Core\Insite.Core.TestHelpers\Insite.Core.TestHelpers.csproj" />
+    <ProjectReference Include="..\..\..\Data\Insite.Data.Entities\Insite.Data.Entities.csproj" />
+    <ProjectReference Include="..\Insite.Integration.Connector.Prophet21\Insite.Integration.Connector.Prophet21.csproj" />
+  </ItemGroup>
+</Project>

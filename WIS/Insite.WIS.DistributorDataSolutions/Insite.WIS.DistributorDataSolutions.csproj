@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\DDSDataFeedCategorySourceFile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DDSDataFeedCategorySourceFile.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\DDSDataFeedProductSourceFile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DDSDataFeedProductSourceFile.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" />
+    <ProjectReference Include="..\..\Insite.Common\Insite.Common.csproj" />
+    <ProjectReference Include="..\Insite.Integration\Insite.Integration.csproj" />
+    <ProjectReference Include="..\Insite.WIS.Broker\Insite.WIS.Broker.csproj" />
+  </ItemGroup>
+</Project>

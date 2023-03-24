@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Erp.Tablesets" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CustCnt.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+  <xs:complexType name="CustCntTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Ice" base="q1:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustCnt" nillable="true" type="tns:CustCntTable" />
+          <xs:element minOccurs="0" name="CustCntAttch" nillable="true" type="tns:CustCntAttchTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustCntTableset" nillable="true" type="tns:CustCntTableset" />
+  <xs:complexType name="CustCntTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustCntRow" nillable="true" type="tns:CustCntRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustCntTable" nillable="true" type="tns:CustCntTable" />
+  <xs:complexType name="CustCntRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Ice" base="q2:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AltNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AttrCodeList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="CellPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeDcdUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactTitle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CorpName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateDcdUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustNumBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FaceBook" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FaxNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Func" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlbFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GlbLink" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlobalLock" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HomeNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Inactive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Initials" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LinkedIn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MasterConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="MasterCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="MasterCustNumBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MasterCustNumCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MasterCustNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MasterShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoContact" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PagerNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PerConAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PerConID" type="xs:int" />
+          <xs:element minOccurs="0" name="PerConName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PortalUser" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Prefix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrimaryBilling" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PrimaryPurchasing" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PrimaryShipping" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ReportsTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoleCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoleDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SFPortalPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SFUser" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShowInputPrice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SpecialAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Suffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SyncAddressToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncEmailToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncLinksToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncNameToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncPhoneToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="Twitter" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebSite" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustCntRow" nillable="true" type="tns:CustCntRow" />
+  <xs:complexType name="CustCntAttchTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustCntAttchRow" nillable="true" type="tns:CustCntAttchRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustCntAttchTable" nillable="true" type="tns:CustCntAttchTable" />
+  <xs:complexType name="CustCntAttchRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Ice" base="q3:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="DocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawingSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PDMDocID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="XFileRefNum" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustCntAttchRow" nillable="true" type="tns:CustCntAttchRow" />
+  <xs:complexType name="CustCntListTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Ice" base="q4:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustCntList" nillable="true" type="tns:CustCntListTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustCntListTableset" nillable="true" type="tns:CustCntListTableset" />
+  <xs:complexType name="CustCntListTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustCntListRow" nillable="true" type="tns:CustCntListRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustCntListTable" nillable="true" type="tns:CustCntListTable" />
+  <xs:complexType name="CustCntListRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Ice" base="q5:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AltNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AttrCodeList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CellPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeDcdUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactTitle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CorpName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateDcdUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustNumBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FaceBook" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FaxNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Func" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlbFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GlbLink" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlobalLock" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HomeNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Inactive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Initials" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LinkedIn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MasterConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="MasterCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="MasterCustNumBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MasterCustNumCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MasterCustNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MasterShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoContact" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PagerNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PerConAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PerConID" type="xs:int" />
+          <xs:element minOccurs="0" name="PerConName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PortalUser" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Prefix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrimaryBilling" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PrimaryPurchasing" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PrimaryShipping" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ReportsTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoleCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoleDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SFPortalPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SFUser" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShowInputPrice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SpecialAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Suffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SyncAddressToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncEmailToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncLinksToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncNameToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncPhoneToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="Twitter" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebSite" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustCntListRow" nillable="true" type="tns:CustCntListRow" />
+  <xs:complexType name="UpdExtCustCntTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Ice" base="q6:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustCnt" nillable="true" type="tns:CustCntTable" />
+          <xs:element minOccurs="0" name="CustCntAttch" nillable="true" type="tns:CustCntAttchTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdExtCustCntTableset" nillable="true" type="tns:UpdExtCustCntTableset" />
+  <xs:complexType name="GlbCustCntTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Ice" base="q7:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GlbCustCnt" nillable="true" type="tns:GlbCustCntTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GlbCustCntTableset" nillable="true" type="tns:GlbCustCntTableset" />
+  <xs:complexType name="GlbCustCntTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GlbCustCntRow" nillable="true" type="tns:GlbCustCntRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GlbCustCntTable" nillable="true" type="tns:GlbCustCntTable" />
+  <xs:complexType name="GlbCustCntRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Ice" base="q8:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AltNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="CellPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeDcdUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ContactTitle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CorpName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateDcdUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="EMailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FaceBook" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FaxNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Func" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlbCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlbConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="GlbCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="GlbShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlobalLock" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HomeNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Inactive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Initials" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LinkConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="LinkedIn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MasterConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="MasterCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="MasterShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoContact" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OldCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OldCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OldShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PagerNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PerConAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PerConID" type="xs:int" />
+          <xs:element minOccurs="0" name="PhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PortalUser" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Prefix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReportsTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoleCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoleDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SFPortalPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SFUser" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShowInputPrice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Skipped" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SpecialAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Suffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SyncAddressToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncEmailToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncLinksToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncNameToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncPhoneToPerCon" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="Twitter" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebLink5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebSite" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GlbCustCntRow" nillable="true" type="tns:GlbCustCntRow" />
+</xs:schema>

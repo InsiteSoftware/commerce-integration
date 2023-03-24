@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Insite.Core.TestHelpers\Insite.Core.TestHelpers.csproj" />
+    <ProjectReference Include="..\..\Insite.Plugins\Insite.Plugins.csproj" />
+    <ProjectReference Include="..\Insite.Integration.Connector.Acumatica\Insite.Integration.Connector.Acumatica.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Erp:BO:CashRec" elementFormDefault="qualified" targetNamespace="Erp:BO:CashRec" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" />
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+  <xs:element name="AssignLegalNumberBankRec">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q1:CashRecTableset" />
+        <xs:element minOccurs="0" name="inHeadNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignLegalNumberBankRecResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q2:CashRecTableset" />
+        <xs:element minOccurs="0" name="msgLegalNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMasterBankRec">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q3:CashRecTableset" />
+        <xs:element minOccurs="0" name="inHeadNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMasterBankRecResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q4:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCashHead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q5:CashRecTableset" />
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCashHeadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q6:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCashHeadAttch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q7:CashRecTableset" />
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCashHeadAttchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q8:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewBankTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q9:CashRecTableset" />
+        <xs:element minOccurs="0" name="bankAcctID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewBankTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q10:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewBankTranTaxDtl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q11:CashRecTableset" />
+        <xs:element minOccurs="0" name="sourceModule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+        <xs:element minOccurs="0" name="apTranNo" type="xs:int" />
+        <xs:element minOccurs="0" name="invoiceNum" type="xs:int" />
+        <xs:element minOccurs="0" name="invoiceRef" type="xs:int" />
+        <xs:element minOccurs="0" name="bankAcctID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranNum" type="xs:int" />
+        <xs:element minOccurs="0" name="voided" type="xs:boolean" />
+        <xs:element minOccurs="0" name="taxCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rateCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewBankTranTaxDtlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q12:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewBankTranTGLC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q13:CashRecTableset" />
+        <xs:element minOccurs="0" name="bankAcctID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranNum" type="xs:int" />
+        <xs:element minOccurs="0" name="voided" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewBankTranTGLCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q14:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewDebNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q15:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewDebNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q16:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCashDtl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q17:CashRecTableset" />
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+        <xs:element minOccurs="0" name="invoiceNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCashDtlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q18:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCDTaxDtl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q19:CashRecTableset" />
+        <xs:element minOccurs="0" name="sourceModule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+        <xs:element minOccurs="0" name="apTranNo" type="xs:int" />
+        <xs:element minOccurs="0" name="invoiceNum" type="xs:int" />
+        <xs:element minOccurs="0" name="invoiceRef" type="xs:int" />
+        <xs:element minOccurs="0" name="bankAcctID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranNum" type="xs:int" />
+        <xs:element minOccurs="0" name="voided" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCDTaxDtlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q20:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCashHeadTGLC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q21:CashRecTableset" />
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCashHeadTGLCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q22:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewTaxDtl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q23:CashRecTableset" />
+        <xs:element minOccurs="0" name="sourceModule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+        <xs:element minOccurs="0" name="apTranNo" type="xs:int" />
+        <xs:element minOccurs="0" name="invoiceNum" type="xs:int" />
+        <xs:element minOccurs="0" name="invoiceRef" type="xs:int" />
+        <xs:element minOccurs="0" name="bankAcctID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranNum" type="xs:int" />
+        <xs:element minOccurs="0" name="voided" type="xs:boolean" />
+        <xs:element minOccurs="0" name="taxCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rateCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewTaxDtlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q24:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteByIDResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetByIDResult" nillable="true" type="q25:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="whereClause" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="absolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetListResult" nillable="true" type="q26:CashHeadListTableset" />
+        <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRows">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="whereClauseCashHead" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseCashHeadAttch" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseBankTran" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseBankTranTaxDtl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseBankTranTGLC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseDebNote" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseCashDtl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseCDTaxDtl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseCashHeadTGLC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseTaxDtl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseLegalNumGenOpts" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="absolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRowsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetRowsResult" nillable="true" type="q27:CashRecTableset" />
+        <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="id" type="q28:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetBySysRowIDResult" nillable="true" type="q29:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q30:ArrayOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetBySysRowIDsResult" nillable="true" type="q31:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q32:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q33:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q34:UpdExtCashRecTableset" />
+        <xs:element minOccurs="0" name="continueProcessingOnError" type="xs:boolean" />
+        <xs:element minOccurs="0" name="rollbackParentOnChildError" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Ice" minOccurs="0" name="UpdateExtResult" nillable="true" type="q35:BOUpdErrorTableset" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q36:UpdExtCashRecTableset" />
+        <xs:element minOccurs="0" name="errorsOccurred" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsUnAppliedDNExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cashHeadNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsUnAppliedDNExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsUnAppliedDNExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignLegalNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q37:CashRecTableset" />
+        <xs:element minOccurs="0" name="inHeadNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignLegalNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q38:CashRecTableset" />
+        <xs:element minOccurs="0" name="msgLegalNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByIDTracker">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q39:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByIDTrackerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetByIDTrackerResult" nillable="true" type="q40:CashRecTableset" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q41:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalcTaxRecNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ipGroupID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q42:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalcTaxRecNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="opLegalNumMsg" nillable="true" type="xs:string" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q43:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CashRecGetInvoices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="payDay" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="whereClause" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CashRecGetInvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="CashRecGetInvoicesResult" nillable="true" type="q44:ARInvcAllocTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CCClear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q45:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CCClearResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q46:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CCLoadTranData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q47:CashRecTableset" />
+        <xs:element minOccurs="0" name="inTranDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="inTranTime" type="xs:int" />
+        <xs:element minOccurs="0" name="inTranNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CCLoadTranDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q48:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CCProcessCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inTranType" nillable="true" type="xs:string" />
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q49:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CCProcessCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="opMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q50:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeBankAmount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q51:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeBankAmountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q52:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeBankExchangeRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exchangeRate" type="xs:decimal" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q53:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeBankExchangeRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q54:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeBankReceiptExgRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exchangeRate" type="xs:decimal" />
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q55:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeBankReceiptExgRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q56:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeCCAmounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q57:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeCCAmountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q58:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeCreditExp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ipExpMonth" type="xs:int" />
+        <xs:element minOccurs="0" name="ipExpYear" type="xs:int" />
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q59:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeCreditExpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q60:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeDNAmount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dnAmount" type="xs:decimal" />
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q61:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeDNAmountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q62:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeIncomeTaxCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ipIncomeTaxCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q63:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeIncomeTaxCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q64:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeReceiptAmt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q65:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeReceiptAmtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q66:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeReceiptCurrency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q67:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeReceiptCurrencyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q68:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeSettlementExgRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exchangeRate" type="xs:decimal" />
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q69:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeSettlementExgRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q70:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeTaxWhld">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="taxWhld" type="xs:decimal" />
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q71:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeTaxWhldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q72:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeTranAmt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ipTranAmtType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="proposedTranAmt" type="xs:decimal" />
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q73:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeTranAmtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q74:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckDocumentIsLocked">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="keyValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyValue2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckDocumentIsLockedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateChecks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pcGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="useDisc" type="xs:boolean" />
+        <xs:element minOccurs="0" name="allowNegReceipts" type="xs:boolean" />
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q75:ARInvSelTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateChecksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="CreateChecksResult" nillable="true" type="q76:CashRecTableset" />
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q77:ARInvSelTableset" />
+        <xs:element minOccurs="0" name="opTotalCashReceived" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalApplied" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opUnappliedBalance" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalMisc" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalDiscount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalDeposit" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalARAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalWithhold" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateNewDebitNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q78:CashRecTableset" />
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateNewDebitNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q79:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q80:CashRecTableset" />
+        <xs:element minOccurs="0" name="pcGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ipHeadNum" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q81:CashRecTableset" />
+        <xs:element minOccurs="0" name="opTotalCashReceived" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalApplied" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opUnappliedBalance" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalMisc" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalDiscount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalDeposit" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalARAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalWithhold" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteNegativeReceipts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pcGroupID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteNegativeReceiptsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnterCustDebNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dnCustNbr" nillable="true" type="xs:string" />
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q82:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnterCustDebNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q83:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateCashDtl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+        <xs:element minOccurs="0" name="invoiceNum" type="xs:int" />
+        <xs:element minOccurs="0" name="takeDiscount" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateCashDtlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GenerateCashDtlResult" nillable="true" type="q84:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjAmtTax">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjAmtTaxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adjustAmtTax" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankFeeDefaultAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bankAcctID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranNum" type="xs:int" />
+        <xs:element minOccurs="0" name="voided" type="xs:boolean" />
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q85:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankFeeDefaultAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q86:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCashHeadDefaultAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q87:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCashHeadDefaultAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q88:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencyInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q89:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencyInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q90:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="custID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q91:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q92:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultLegalNumOpts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q93:CashRecTableset" />
+        <xs:element minOccurs="0" name="inHeadNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultLegalNumOptsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q94:CashRecTableset" />
+        <xs:element minOccurs="0" name="RequiresUserInput" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDNInvInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dnInvNbr" type="xs:int" />
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q95:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDNInvInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q96:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDtlDiscountInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="docDiscount" type="xs:decimal" />
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q97:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDtlDiscountInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q98:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDtlInvoiceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceNum" type="xs:int" />
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q99:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDtlInvoiceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q100:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDtlLegalNumberInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="legalNumber" nillable="true" type="xs:string" />
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q101:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDtlLegalNumberInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q102:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDtlTranAmtInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="docTranAmt" type="xs:decimal" />
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q103:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDtlTranAmtInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q104:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDtlTranAmtInfoExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cashDeskID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="referenceNum" type="xs:int" />
+        <xs:element minOccurs="0" name="applyDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="exchangeRateDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDtlTranAmtInfoExtResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHdrInvoiceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceNum" type="xs:int" />
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q105:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHdrInvoiceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q106:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHdrLegalNumberInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="legalNumber" nillable="true" type="xs:string" />
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q107:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHdrLegalNumberInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q108:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewBankTranByHeadNum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lvHeadNum" type="xs:int" />
+        <xs:element minOccurs="0" name="lvBankAcctID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q109:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewBankTranByHeadNumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q110:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCashHeadType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q111:CashRecTableset" />
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCashHeadTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q112:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderNum" type="xs:int" />
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q113:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q114:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderInfo4DskCurr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderNum" type="xs:int" />
+        <xs:element minOccurs="0" name="dskCurrCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q115:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderInfo4DskCurrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q116:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRateCodeInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="taxtbl" nillable="true" type="xs:string" />
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q117:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRateCodeInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q118:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesTaxInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="taxCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="taxtbl" nillable="true" type="xs:string" />
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q119:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesTaxInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q120:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxableInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="taxableAmt" type="xs:decimal" />
+        <xs:element minOccurs="0" name="taxPercent" type="xs:decimal" />
+        <xs:element minOccurs="0" name="fixedAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="taxtbl" nillable="true" type="xs:string" />
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q121:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxableInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q122:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranAmt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseEntered" type="xs:boolean" />
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q123:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranAmtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q124:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsDueDateHighLighted">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ipCustNum" type="xs:int" />
+        <xs:element minOccurs="0" name="ipDueDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsDueDateHighLightedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bDueDateHighLighted" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeaveCashHead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+        <xs:element minOccurs="0" name="onAccount" type="xs:boolean" />
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q125:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeaveCashHeadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q126:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MassApplyDebitNotes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="custNum" type="xs:int" />
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q127:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MassApplyDebitNotesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dnApplyErrorMsg" nillable="true" type="xs:string" />
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q128:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MassDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pcGroupID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MassDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MassGenerateCashDtl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pcGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ipHeadNum" type="xs:int" />
+        <xs:element minOccurs="0" name="useDisc" type="xs:boolean" />
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q129:ARInvSelTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MassGenerateCashDtlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="MassGenerateCashDtlResult" nillable="true" type="q130:CashRecTableset" />
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q131:ARInvSelTableset" />
+        <xs:element minOccurs="0" name="massGenErrorMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="opTotalCashReceived" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalApplied" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opUnappliedBalance" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalMisc" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalDiscount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalDeposit" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalARAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalWithhold" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnChangeBankFeeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pcBankFeeID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q132:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnChangeBankFeeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q133:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnChangeTranDocTypeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ipTranDocTypeID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q134:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnChangeTranDocTypeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q135:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecalcBankTax">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q136:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecalcBankTaxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q137:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecalcCDTax">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q138:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecalcCDTaxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q139:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecalcTax">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q140:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecalcTaxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q141:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReverseCashReceipt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="headNum" type="xs:int" />
+        <xs:element minOccurs="0" name="reverseDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReverseCashReceiptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="postErrorLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectInvoices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pcGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pdtDueDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="pdtTranDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="plApplyDiscount" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pcCustomerList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pcPaymentMethod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectInvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="SelectInvoicesResult" nillable="true" type="q142:ARInvSelTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetReadyToCalc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ipGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ipHeadNum" type="xs:int" />
+        <xs:element minOccurs="0" name="ipInvoiceNum" type="xs:int" />
+        <xs:element minOccurs="0" name="ipInvoiceRef" type="xs:int" />
+        <xs:element minOccurs="0" name="ipBankAcctID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ipTranNum" type="xs:int" />
+        <xs:element minOccurs="0" name="ipVoided" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ipCalcAll" type="xs:boolean" />
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q143:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetReadyToCalcResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q144:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TakeDiscount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q145:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TakeDiscountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q146:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAutoGen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q147:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAutoGenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q148:CashRecTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q149:CashRecTableset" />
+        <xs:element minOccurs="0" name="ipGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ipTableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="updGroupTotals" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ipIgnoreValidation" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q150:CashRecTableset" />
+        <xs:element minOccurs="0" name="opTotalCashReceived" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalApplied" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opUnappliedBalance" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalMisc" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalDiscount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalDeposit" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalARAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opTotalWithhold" type="xs:decimal" />
+        <xs:element minOccurs="0" name="opUpdateRan" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCodeDescList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCodeDescListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCodeDescListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidatePrintEditList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ipGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ipHeadNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidatePrintEditListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="opWarningReceipt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="opWarningWithhold" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

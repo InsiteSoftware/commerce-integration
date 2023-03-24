@@ -1,0 +1,2247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Erp.Tablesets" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/SalesOrder.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/SalesOrder.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="SalesOrderTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Ice" base="q1:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HedTaxSum" nillable="true" type="tns:HedTaxSumTable" />
+          <xs:element minOccurs="0" name="OHOrderMsc" nillable="true" type="tns:OHOrderMscTable" />
+          <xs:element minOccurs="0" name="OrderDtl" nillable="true" type="tns:OrderDtlTable" />
+          <xs:element minOccurs="0" name="OrderDtlAttch" nillable="true" type="tns:OrderDtlAttchTable" />
+          <xs:element minOccurs="0" name="OrderHed" nillable="true" type="tns:OrderHedTable" />
+          <xs:element minOccurs="0" name="OrderHedAttch" nillable="true" type="tns:OrderHedAttchTable" />
+          <xs:element minOccurs="0" name="OrderHedUPS" nillable="true" type="tns:OrderHedUPSTable" />
+          <xs:element minOccurs="0" name="OrderHist" nillable="true" type="tns:OrderHistTable" />
+          <xs:element minOccurs="0" name="OrderMsc" nillable="true" type="tns:OrderMscTable" />
+          <xs:element minOccurs="0" name="OrderRel" nillable="true" type="tns:OrderRelTable" />
+          <xs:element minOccurs="0" name="OrderRelTax" nillable="true" type="tns:OrderRelTaxTable" />
+          <xs:element minOccurs="0" name="OrderRepComm" nillable="true" type="tns:OrderRepCommTable" />
+          <xs:element minOccurs="0" name="PartSubs" nillable="true" type="tns:PartSubsTable" />
+          <xs:element minOccurs="0" name="SNFormat" nillable="true" type="tns:SNFormatTable" />
+          <xs:element minOccurs="0" name="SelectedSerialNumbers" nillable="true" type="tns:SelectedSerialNumbersTable" />
+          <xs:element minOccurs="0" name="TaxConnectStatus" nillable="true" type="tns:TaxConnectStatusTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SalesOrderTableset" nillable="true" type="tns:SalesOrderTableset" />
+  <xs:complexType name="HedTaxSumTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HedTaxSumRow" nillable="true" type="tns:HedTaxSumRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HedTaxSumTable" nillable="true" type="tns:HedTaxSumTable" />
+  <xs:complexType name="HedTaxSumRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Ice" base="q2:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllocDepInvcNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DisplaySymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocDisplaySymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocReportableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HedNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Percent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RateCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReportableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1ReportableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2ReportableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3ReportableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxableAmt" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HedTaxSumRow" nillable="true" type="tns:HedTaxSumRow" />
+  <xs:complexType name="OHOrderMscTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OHOrderMscRow" nillable="true" type="tns:OHOrderMscRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OHOrderMscTable" nillable="true" type="tns:OHOrderMscTable" />
+  <xs:complexType name="OHOrderMscRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Ice" base="q3:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BaseCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangeTrackAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ChangeTrackApproved" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ChangeTrackMemoDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeTrackMemoText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeTrackStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocDspMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DspMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="EntryProcess" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FreqCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ICPOLine" type="xs:int" />
+          <xs:element minOccurs="0" name="ICPONum" type="xs:int" />
+          <xs:element minOccurs="0" name="ICPOSeqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Linked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MiscCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MiscCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderLine" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNumCardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNumCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Percentage" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Quoting" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rpt1DspMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1MiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DspMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2MiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DspMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3MiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SeqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OHOrderMscRow" nillable="true" type="tns:OHOrderMscRow" />
+  <xs:complexType name="OrderDtlTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderDtlRow" nillable="true" type="tns:OrderDtlRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderDtlTable" nillable="true" type="tns:OrderDtlTable" />
+  <xs:complexType name="OrderDtlRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Ice" base="q4:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdvanceBillBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AvailPriceLists" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AvailUMFromQuote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AvailableQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BaseCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BaseCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BasePartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BaseRevisionNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BinNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="BreakListCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Commissionable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConfigBaseUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ConfigUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Configured" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractCodeContractDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CounterSale" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CounterSaleBinNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CounterSaleDimCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CounterSaleLotNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CounterSaleWarehouse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateNewJob" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditLimitMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreditLimitSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CumeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CumeQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustNumBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DefaultOversPricing" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DemandContractLine" type="xs:int" />
+          <xs:element minOccurs="0" name="DemandContractNum" type="xs:int" />
+          <xs:element minOccurs="0" name="DemandDtlRejected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DemandDtlSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="DemandHeadSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="DemandQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DimCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DimConvFactor" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscBreakListCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiscBreakListCodeEndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DiscBreakListCodeListDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiscBreakListCodeStartDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DiscListPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscountPercent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DisplaySeq" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DoNotShipAfterDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DoNotShipBeforeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DocAdvanceBillBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDspDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDspUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocExtPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocExtPriceDtl" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInExtPriceDtl" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInListPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInMiscCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInOrdBasedPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocLessDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocListPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocMiscCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocOrdBasedPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DspDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DspJobType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DspUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DupOnJobCrt" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ECCOrderLine" type="xs:int" />
+          <xs:element minOccurs="0" name="ECCOrderNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ECCPlant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ECCQuoteLine" type="xs:int" />
+          <xs:element minOccurs="0" name="ECCQuoteNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnableCreateNewJob" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableGetDtls" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableKitUnitPrice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableRelJob" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableRenewalNbr" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableSchedJob" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableSellingQty" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EntryProcess" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ExtPriceDtl" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FromQuoteLineFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GetDtls" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GroupSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="HasBeenConfigured" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasComplement" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasDowngrade" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasSubstitute" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasUpgrade" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ICPOLine" type="xs:int" />
+          <xs:element minOccurs="0" name="ICPONum" type="xs:int" />
+          <xs:element minOccurs="0" name="IUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InExtPriceDtl" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InListPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InMiscCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InOrdBasedPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InPrice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvtyUOM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JobTypeMFG" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JobWasCreated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KitAllowUpdate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KitBackFlush" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KitChangeParms" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KitCompOrigPart" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KitCompOrigSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="KitDisable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KitFlag" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KitFlagDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KitOrderQtyUOM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KitParentLine" type="xs:int" />
+          <xs:element minOccurs="0" name="KitPricing" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KitPrintCompsInv" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KitPrintCompsPS" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KitQtyPer" type="xs:decimal" />
+          <xs:element minOccurs="0" name="KitShipComplete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KitStandard" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KitsLoaded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LabCovered" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LaborDuration" type="xs:int" />
+          <xs:element minOccurs="0" name="LaborMod" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastConfigDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastConfigTime" type="xs:int" />
+          <xs:element minOccurs="0" name="LastConfigUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LessDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="LineDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Linked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ListPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="LockDisc" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockPrice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockQty" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LotNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MOMsourceEst" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MOMsourceType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MatCovered" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MaterialDuration" type="xs:int" />
+          <xs:element minOccurs="0" name="MaterialMod" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MiscCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MiscCovered" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MiscDuration" type="xs:int" />
+          <xs:element minOccurs="0" name="MktgCampaignID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MktgCampaignIDCampDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MktgEvntEvntDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MktgEvntSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="MultipleReleases" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NeedByDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OldOpenValue" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OldOurOpenQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OldProdCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldSellingOpenQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OnHandQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Onsite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OpenLine" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrdBasedPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OrderComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderLine" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNumBTCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNumCardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNumCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OrigWhyNoTax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OverrideDiscPriceList" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OverridePriceList" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Overs" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OversUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="POLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="POLineRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartExists" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumIUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumPartDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumPricePerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumSalesUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumSellingFactor" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PartNumTrackDimension" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartNumTrackLots" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartNumTrackSerialNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartTrackDimension" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartTrackLots" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PickListComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlanGUID" type="ser:guid" />
+          <xs:element minOccurs="0" name="PlanUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrevPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrevSellQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PrevXPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriceGroupCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriceListCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriceListCodeDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PricePerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PricingQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PricingValue" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ProFormaInvComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessCounterSale" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProcessQuickEntry" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProdCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProdCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProjectID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProjectIDDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuoteLine" type="xs:int" />
+          <xs:element minOccurs="0" name="QuoteNum" type="xs:int" />
+          <xs:element minOccurs="0" name="QuoteNumCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuoteQtyNum" type="xs:int" />
+          <xs:element minOccurs="0" name="RMALine" type="xs:int" />
+          <xs:element minOccurs="0" name="RMANum" type="xs:int" />
+          <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelJob" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RelWasRecInvoiced" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RenewalNbr" type="xs:int" />
+          <xs:element minOccurs="0" name="RepRate1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate3" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate4" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate5" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSplit1" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit2" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit3" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit4" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit5" type="xs:int" />
+          <xs:element minOccurs="0" name="RequestDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RespMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReverseCharge" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RevisionNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rework" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Rpt1AdvanceBillBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DspDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DspUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1ExtPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1ExtPriceDtl" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InExtPriceDtl" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InListPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InMiscCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InOrdBasedPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1LessDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1ListPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1MiscCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1OrdBasedPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TotalPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2AdvanceBillBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DspDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DspUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2ExtPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2ExtPriceDtl" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InExtPriceDtl" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InListPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InMiscCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InOrdBasedPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2LessDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2ListPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2MiscCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2OrdBasedPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TotalPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3AdvanceBillBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DspDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DspUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3ExtPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3ExtPriceDtl" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InExtPriceDtl" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InListPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InMiscCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InOrdBasedPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3LessDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3ListPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3MiscCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3OrdBasedPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TotalPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesCatID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesCatIDDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepName1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepName2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepName3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepName4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepName5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SchedJob" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SellingFactor" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SellingFactorDirection" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SellingQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ShipComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipLineComplete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SmartString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SmartStringProcessed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TMBilling" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxCatID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxCatIDDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ThisOrderInvtyQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalReleases" type="xs:int" />
+          <xs:element minOccurs="0" name="TotalShipped" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Unders" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UndersPct" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="VoidLine" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarehouseDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Warranty" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WarrantyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarrantyCodeWarrDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarrantyComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XRevisionNum" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderDtlRow" nillable="true" type="tns:OrderDtlRow" />
+  <xs:complexType name="OrderDtlAttchTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderDtlAttchRow" nillable="true" type="tns:OrderDtlAttchRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderDtlAttchTable" nillable="true" type="tns:OrderDtlAttchTable" />
+  <xs:complexType name="OrderDtlAttchRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Ice" base="q5:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawingSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderLine" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PDMDocID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="XFileRefNum" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderDtlAttchRow" nillable="true" type="tns:OrderDtlAttchRow" />
+  <xs:complexType name="OrderHedTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderHedRow" nillable="true" type="tns:OrderHedRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderHedTable" nillable="true" type="tns:OrderHedTable" />
+  <xs:complexType name="OrderHedRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Ice" base="q6:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ARLOCID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AVSAddr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AVSZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AckEmailSent" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AddlHdlgFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AllocPriorityCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApplyChrg" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ApplyOrderBasedDisc" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AutoOrderBasedDisc" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AutoPrintReady" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AvailBTCustList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTAddressList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="BTContactEMailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTContactFaxNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTContactPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="BTCustNumBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTCustNumCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTCustNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BaseCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BaseCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BillToCustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCApprovalNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCCSCID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCCSCIDToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCDocAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCDocFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCDocTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCDocTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCResponse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCRounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCStreetAddr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCTranID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCTranType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COD" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CODAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CODCheck" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CODFreight" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CSCResult" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CanChangeTaxLiab" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CancelAfterDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CardID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardStore" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardTypeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardmemberReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CertOfOrigin" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChrgAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CommercialInvoice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CounterSale" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreateInvoice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreatePackingSlip" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditCardOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditOverride" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditOverrideDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreditOverrideLimit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CreditOverrideTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreditOverrideUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeDocumentDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustAllowOTS" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustOnCreditHold" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustTradePartnerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerAllowShipTo3" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustomerBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerPrintAck" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustomerRequiresPO" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DeclaredAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DeclaredIns" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DeliveryConf" type="xs:int" />
+          <xs:element minOccurs="0" name="DeliveryType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DemandContract" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DemandContractNum" type="xs:int" />
+          <xs:element minOccurs="0" name="DemandHeadSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="DemandProcessDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DemandProcessTime" type="xs:int" />
+          <xs:element minOccurs="0" name="DemandRejected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DepositBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscountPercent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DispatchReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DispatchReasonCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DoNotShipAfterDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DoNotShipBeforeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DocCCRounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepositBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInTotalCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInTotalDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInTotalMisc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocOnly" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DocOrderAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocRounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalAdvBill" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalComm" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalMisc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalNet" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalOrder" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalSATax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalWHTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocumentTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DropShip" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ECCOrderNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ECCPONum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EDIAck" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EDIOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EDIReady" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ERSOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ERSOverride" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableJobWizard" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableSoldToID" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EntryMethod" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntryPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntryProcess" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ExpirationMonth" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpirationYear" type="xs:int" />
+          <xs:element minOccurs="0" name="ExtCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FFAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FFAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FFAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FFCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FFCompName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FFContact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FFCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FFCountryNum" type="xs:int" />
+          <xs:element minOccurs="0" name="FFID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FFPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FFState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FFZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FOBDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GroundType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HDCaseDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HDCaseNum" type="xs:int" />
+          <xs:element minOccurs="0" name="HasMiscCharges" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HasOrderLines" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Hazmat" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HoldSetByDemand" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ICPONum" type="xs:int" />
+          <xs:element minOccurs="0" name="InPrice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InTotalCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InTotalDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InTotalMisc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IndividualPackIDs" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IntrntlShip" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InvCurrCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvCurrCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvcOrderCmp" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InvoiceComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LOCHold" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastBatchNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastScheduleNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastTCtrlNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LetterOfInstr" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LinkMsg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Linked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockQty" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockRate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NeedByDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NonStdPkg" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NotifyEMail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotifyFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OTSAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSCntryDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSContact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSCountryNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OTSCustSaved" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OTSFaxNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSResaleID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSSaveAs" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSSaveCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSSaved" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OTSShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSTaxRegionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSZIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OpenOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OrderCSR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderHeld" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OurBank" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OurBankBankName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OurBankDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OutboundSalesDocCtr" type="xs:int" />
+          <xs:element minOccurs="0" name="OutboundShipDocsCtr" type="xs:int" />
+          <xs:element minOccurs="0" name="OverrideCarrier" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OverrideService" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PONum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PSCurrCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PSCurrCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParentCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PayAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayBTAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayBTAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayBTAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayBTCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayBTCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayBTCountryNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PayBTPhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayBTState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayBTZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayFlag" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PickListComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Plant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrcConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ProFormaInvComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessCard" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateGrpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateGrpDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReadyToCalc" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RefNotes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferencePNRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RepRate1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate3" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate4" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate5" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSplit1" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit2" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit3" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit4" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit5" type="xs:int" />
+          <xs:element minOccurs="0" name="RequestDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ResDelivery" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ReservePriDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReservePriorityCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCRounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DepositBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InTotalCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InTotalDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InTotalMisc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1OrderAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TotalAdvBill" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TotalCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TotalComm" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TotalDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TotalMisc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TotalNet" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TotalSATax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TotalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TotalWHTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCRounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DepositBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InTotalCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InTotalDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InTotalMisc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2OrderAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TotalAdvBill" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TotalCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TotalComm" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TotalDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TotalMisc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TotalNet" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TotalSATax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TotalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TotalWHTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCRounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DepositBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InTotalCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InTotalDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InTotalMisc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3OrderAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TotalAdvBill" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TotalCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TotalComm" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TotalDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TotalMisc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TotalNet" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TotalSATax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TotalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TotalWHTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SRCommAmt1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SRCommAmt2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SRCommAmt3" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SRCommAmt4" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SRCommAmt5" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SRCommableAmt1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SRCommableAmt2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SRCommableAmt3" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SRCommableAmt4" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SRCommableAmt5" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesRepCode1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepCode2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepCode3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepCode4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepCode5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepName1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepName2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepName3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepName4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepName5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SatDelivery" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SatPickup" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ServAlert" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ServAuthNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServDeliveryDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ServHomeDel" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ServInstruct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServPhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRef1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRef2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRef3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRef4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRef5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRelease" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ServSignature" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShipComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipExprtDeclartn" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShipOrderComplete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShipToAddressList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToContactEMailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToContactFaxNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToContactPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToCustId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipViaCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipViaCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipViaCodeWebDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShowApplyOrderDiscountsControl" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShpConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="SndAlrtShp" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SoldToAddressList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToContactEMailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToContactFaxNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToContactPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TaxPoint" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxRateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxRegionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRegionCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TermsCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TermsCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalAdvBill" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalCharges" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalComm" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalCommLines" type="xs:int" />
+          <xs:element minOccurs="0" name="TotalDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalInvoiced" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalLines" type="xs:int" />
+          <xs:element minOccurs="0" name="TotalMisc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalNet" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalOrder" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalRelDates" type="xs:int" />
+          <xs:element minOccurs="0" name="TotalReleases" type="xs:int" />
+          <xs:element minOccurs="0" name="TotalSATax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalShipped" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalWHTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranDocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPSQVMemo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPSQVShipFromName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPSQuantumView" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UpdateDtlAndRelRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UseOTS" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserChar1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserChar2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserChar3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserChar4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserDate1" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserDate2" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserDate3" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserDate4" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserDecimal1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UserDecimal2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UserInteger1" type="xs:int" />
+          <xs:element minOccurs="0" name="UserInteger2" type="xs:int" />
+          <xs:element minOccurs="0" name="VoidOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WIApplication" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WICreditCardorder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WIOrder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WIUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WIUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebEntryPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="XRefContractDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="XRefContractNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="dspBTCustID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderHedRow" nillable="true" type="tns:OrderHedRow" />
+  <xs:complexType name="OrderHedAttchTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderHedAttchRow" nillable="true" type="tns:OrderHedAttchRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderHedAttchTable" nillable="true" type="tns:OrderHedAttchTable" />
+  <xs:complexType name="OrderHedAttchRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Ice" base="q7:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawingSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PDMDocID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="XFileRefNum" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderHedAttchRow" nillable="true" type="tns:OrderHedAttchRow" />
+  <xs:complexType name="OrderHedUPSTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderHedUPSRow" nillable="true" type="tns:OrderHedUPSRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderHedUPSTable" nillable="true" type="tns:OrderHedUPSTable" />
+  <xs:complexType name="OrderHedUPSRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Ice" base="q8:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryNotify" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnableQuantumView" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EntryProcess" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FailureNotify" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ShipmentNotify" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="UPSQVSeq" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderHedUPSRow" nillable="true" type="tns:OrderHedUPSRow" />
+  <xs:complexType name="OrderHistTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderHistRow" nillable="true" type="tns:OrderHistRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderHistTable" nillable="true" type="tns:OrderHistTable" />
+  <xs:complexType name="OrderHistRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Ice" base="q9:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NewQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderLine" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OriginalPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PartDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderHistRow" nillable="true" type="tns:OrderHistRow" />
+  <xs:complexType name="OrderMscTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderMscRow" nillable="true" type="tns:OrderMscRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderMscTable" nillable="true" type="tns:OrderMscTable" />
+  <xs:complexType name="OrderMscRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Ice" base="q10:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BaseCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangeTrackAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ChangeTrackApproved" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ChangeTrackMemoDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeTrackMemoText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeTrackStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocDspMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DspMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="EntryProcess" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FreqCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ICPOLine" type="xs:int" />
+          <xs:element minOccurs="0" name="ICPONum" type="xs:int" />
+          <xs:element minOccurs="0" name="ICPOSeqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Linked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MiscCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MiscCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OpenLine" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderLine" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderLineLineDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNumCardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNumCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Percentage" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Quoting" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rpt1DspMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1MiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DspMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2MiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DspMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InMiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3MiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SeqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderMscRow" nillable="true" type="tns:OrderMscRow" />
+  <xs:complexType name="OrderRelTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderRelRow" nillable="true" type="tns:OrderRelRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderRelTable" nillable="true" type="tns:OrderRelTable" />
+  <xs:complexType name="OrderRelRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Ice" base="q11:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllowTaxCodeUpd" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ApplyChrg" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AvailableQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="BuyOverride" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BuyToOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="COD" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CODAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CODCheck" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CODFreight" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChrgAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ComplianceMsg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreditLimitMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreditLimitSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CumeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CumeQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustAllowOTS" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustomerAllowShipTo3" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustomerCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DatePickTicketPrinted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeclaredAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DeclaredIns" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DeliveryType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DemandReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DemandSchedRejected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DocOnly" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DocSelfAssessTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocWithholdTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DockingStation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DropShip" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DropShipName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DropShipOverride" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DspInvMeth" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DspRevMethod" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ECCPlant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnableMake" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EntityUseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntryProcess" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExistPOSugg" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExtCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirmRelease" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GetDfltTaxIds" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GroundType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Hazmat" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HdrOTS" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ICPOLine" type="xs:int" />
+          <xs:element minOccurs="0" name="ICPONum" type="xs:int" />
+          <xs:element minOccurs="0" name="ICPORelNum" type="xs:int" />
+          <xs:element minOccurs="0" name="IUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LinkToPONum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Linked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MFCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MFCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Make" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MakeOverride" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MarkForAddrList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MarkForNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NeedByDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NotCompliant" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NotifyEMail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotifyFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OTMFAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTMFAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTMFAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTMFCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTMFContact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTMFCountryDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTMFCountryNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OTMFFaxNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTMFName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTMFPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTMFState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTMFZIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSCntryDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSContact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSCountryNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OTSCustSaved" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OTSFaxNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSResaleID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSSaveAs" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSSaveCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSSaved" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OTSShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSTaxRegionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSZIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OnHandQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OpenOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OpenRelease" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderLine" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderLineLineDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNumCardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNumCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderRelNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OurJobQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OurJobShippedQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OurReqQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OurStockQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OurStockShippedQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OverrideCarrier" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OverrideService" type="xs:boolean" />
+          <xs:element minOccurs="0" name="POLine" type="xs:int" />
+          <xs:element minOccurs="0" name="PONum" type="xs:int" />
+          <xs:element minOccurs="0" name="PORelNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PartExists" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumIUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumPartDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumPricePerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumSalesUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumSellingFactor" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PartNumTrackDimension" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartNumTrackLots" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartNumTrackSerialNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PhaseID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhaseWasRecInvoiced" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PickError" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Plant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlantName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrevNeedByDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PrevPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrevReqDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PrevSellQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PrevShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrevXPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProjectID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurPoint" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurPointAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurPointAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurPointAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurPointCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurPointCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurPointName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurPointPrimPCon" type="xs:int" />
+          <xs:element minOccurs="0" name="PurPointState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurPointZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RAN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefNotes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReleaseStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ResDelivery" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RevisionNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rpt1SelfAssessTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TotalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1WithholdTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2SelfAssessTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TotalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2WithholdTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3SelfAssessTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TotalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3WithholdTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SNEnable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SalesOrderLinked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SalesUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SatDelivery" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SatPickup" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ScheduleNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SelectForPicking" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SelfAssessTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SellingFactor" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SellingFactorDirection" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SellingJobQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SellingJobShippedQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SellingReqQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SellingStockQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SellingStockShippedQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ServAOD" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ServAlert" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ServAuthNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServDeliveryDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ServHomeDel" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ServInstruct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServPOD" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ServPhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRef1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRef2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRef3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRef4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRef5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServRelease" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ServSatDelivery" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ServSatPickup" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ServSignature" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShipOvers" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShipRouting" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToAddressList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToContactEMailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToSelected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShipViaCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipViaCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipViaCodeWebDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipbyTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ShpConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="StagingBinNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StagingWarehouseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubShipTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TPShipToBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TPShipToCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TPShipToName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxConnectCalc" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TaxExempt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRegionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRegionCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ThisRelInvtyQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalJobStockShipped" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TransportID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdateMarkForRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UseOTMF" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UseOTS" type="xs:boolean" />
+          <xs:element minOccurs="0" name="VendorNum" type="xs:int" />
+          <xs:element minOccurs="0" name="VendorNumAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNumAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNumAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNumCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNumCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNumCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNumDefaultFOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNumState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNumTermsCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNumVendorID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNumZIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VerbalConf" type="xs:boolean" />
+          <xs:element minOccurs="0" name="VoidOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="VoidRelease" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WIItemPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="WIItemShipCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="WIOrder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WIOrderLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarehouseCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WasRecInvoiced" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WebSKU" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WithholdTax" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderRelRow" nillable="true" type="tns:OrderRelRow" />
+  <xs:complexType name="OrderRelTaxTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderRelTaxRow" nillable="true" type="tns:OrderRelTaxRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderRelTaxTable" nillable="true" type="tns:OrderRelTaxTable" />
+  <xs:complexType name="OrderRelTaxRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Ice" base="q12:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CollectionType" type="xs:int" />
+          <xs:element minOccurs="0" name="CollectionTypeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DisplaySymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocDedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDisplaySymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocFixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocReportableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ECAcquisitionSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="EntryProcess" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExemptPercent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ExemptType" type="xs:int" />
+          <xs:element minOccurs="0" name="FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ManAdd" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Manual" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NoChangeManual" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderLine" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderRelNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Percent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RateCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateCodeDescDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReportableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ResolutionDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ResolutionNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReverseCharge" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Rpt1DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1ReportableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2ReportableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3ReportableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesTaxDescDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TextCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Timing" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderRelTaxRow" nillable="true" type="tns:OrderRelTaxRow" />
+  <xs:complexType name="OrderRepCommTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderRepCommRow" nillable="true" type="tns:OrderRepCommRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderRepCommTable" nillable="true" type="tns:OrderRepCommTable" />
+  <xs:complexType name="OrderRepCommRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Ice" base="q13:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CommAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CommLines" type="xs:int" />
+          <xs:element minOccurs="0" name="CommSaleAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="SalesRepCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Seq" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderRepCommRow" nillable="true" type="tns:OrderRepCommRow" />
+  <xs:complexType name="PartSubsTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PartSubsRow" nillable="true" type="tns:PartSubsRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PartSubsTable" nillable="true" type="tns:PartSubsTable" />
+  <xs:complexType name="PartSubsRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Ice" base="q14:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DefaultSub" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumIUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumPartDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumPricePerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumSalesUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNumSellingFactor" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PartNumTrackDimension" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartNumTrackLots" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartNumTrackSerialNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="QtyPer" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RecType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SubPart" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubPartIUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubPartPartDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubPartPricePerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubPartSalesUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubPartSellingFactor" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SubPartTrackDimension" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SubPartTrackLots" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SubPartTrackSerialNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SubType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SugOrderQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SuggestedQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PartSubsRow" nillable="true" type="tns:PartSubsRow" />
+  <xs:complexType name="SNFormatTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SNFormatRow" nillable="true" type="tns:SNFormatRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SNFormatTable" nillable="true" type="tns:SNFormatTable" />
+  <xs:complexType name="SNFormatRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Ice" base="q15:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HasSerialNumbers" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LeadingZeroes" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NumberOfDigits" type="xs:int" />
+          <xs:element minOccurs="0" name="PartIUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartPartDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartPricePerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartSalesUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartSellingFactor" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PartTrackDimension" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartTrackLots" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartTrackSerialNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Plant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNBaseDataType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNFormat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNLastUsedSeq" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNMask" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNMaskPrefix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNMaskSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNPrefix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SerialMaskDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SerialMaskExample" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SerialMaskMask" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SerialMaskMaskType" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SNFormatRow" nillable="true" type="tns:SNFormatRow" />
+  <xs:complexType name="SelectedSerialNumbersTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SelectedSerialNumbersRow" nillable="true" type="tns:SelectedSerialNumbersRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectedSerialNumbersTable" nillable="true" type="tns:SelectedSerialNumbersTable" />
+  <xs:complexType name="SelectedSerialNumbersRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Ice" base="q16:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Deselected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KBLbrAction" type="xs:int" />
+          <xs:element minOccurs="0" name="KBLbrActionDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KitWhseList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PassedInspection" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PreDeselected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PreventDeselect" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RawSerialNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReasonCodeDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReasonCodeType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNBaseNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNPrefix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Scrapped" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ScrappedReasonCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceRowID" type="ser:guid" />
+          <xs:element minOccurs="0" name="TransType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Voided" type="xs:boolean" />
+          <xs:element minOccurs="0" name="XRefPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XRefPartType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="poLinkValues" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SelectedSerialNumbersRow" nillable="true" type="tns:SelectedSerialNumbersRow" />
+  <xs:complexType name="TaxConnectStatusTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaxConnectStatusRow" nillable="true" type="tns:TaxConnectStatusRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaxConnectStatusTable" nillable="true" type="tns:TaxConnectStatusTable" />
+  <xs:complexType name="TaxConnectStatusRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/Ice" base="q17:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ETCOffline" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TCStatus" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TaxConnectStatusRow" nillable="true" type="tns:TaxConnectStatusRow" />
+  <xs:complexType name="GlbSugPOChgTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Ice" base="q18:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GlbSugPOChg" nillable="true" type="tns:GlbSugPOChgTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GlbSugPOChgTableset" nillable="true" type="tns:GlbSugPOChgTableset" />
+  <xs:complexType name="GlbSugPOChgTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GlbSugPOChgRow" nillable="true" type="tns:GlbSugPOChgRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GlbSugPOChgTable" nillable="true" type="tns:GlbSugPOChgTable" />
+  <xs:complexType name="GlbSugPOChgRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Ice" base="q19:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ABCCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="BuyerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CancelReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="DisplaySuggestionStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlbCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewOurQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NewShipByDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderLine" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderRelNum" type="xs:int" />
+          <xs:element minOccurs="0" name="POLine" type="xs:int" />
+          <xs:element minOccurs="0" name="PONum" type="xs:int" />
+          <xs:element minOccurs="0" name="PORelNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Plant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequireDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SalesIUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SuggestionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SuggestionStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurplusQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TransDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VendorChange" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GlbSugPOChgRow" nillable="true" type="tns:GlbSugPOChgRow" />
+  <xs:complexType name="SaveOTSParamsTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/Ice" base="q20:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SaveOTSParams" nillable="true" type="tns:SaveOTSParamsTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveOTSParamsTableset" nillable="true" type="tns:SaveOTSParamsTableset" />
+  <xs:complexType name="SaveOTSParamsTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SaveOTSParamsRow" nillable="true" type="tns:SaveOTSParamsRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveOTSParamsTable" nillable="true" type="tns:SaveOTSParamsTable" />
+  <xs:complexType name="SaveOTSParamsRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/Ice" base="q21:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OTSAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSContact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSCountryNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OTSCustSaved" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OTSFaxNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSOverride" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OTSPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSResaleID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSSaveAs" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSSaveCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSSaved" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OTSShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSTaxRegionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSZIP" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveOTSParamsRow" nillable="true" type="tns:SaveOTSParamsRow" />
+  <xs:complexType name="ETCAddrValidationTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/Ice" base="q22:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ETCAddress" nillable="true" type="tns:ETCAddressTable" />
+          <xs:element minOccurs="0" name="ETCMessage" nillable="true" type="tns:ETCMessageTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ETCAddrValidationTableset" nillable="true" type="tns:ETCAddrValidationTableset" />
+  <xs:complexType name="ETCAddressTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ETCAddressRow" nillable="true" type="tns:ETCAddressRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ETCAddressTable" nillable="true" type="tns:ETCAddressTable" />
+  <xs:complexType name="ETCAddressRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/Ice" base="q23:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddrSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddrSourceID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressTypeDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CarrierRoute" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CarrierRouteDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryNum" type="xs:int" />
+          <xs:element minOccurs="0" name="County" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FipsCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceLine" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Line1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Line2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Line3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostNet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResultCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResultSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="TransactionID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdateAddr" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UpdateAllowed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ValidCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidLine1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidLine2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidLine3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidLine4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidRegion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ETCAddressRow" nillable="true" type="tns:ETCAddressRow" />
+  <xs:complexType name="ETCMessageTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ETCMessageRow" nillable="true" type="tns:ETCMessageRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ETCMessageTable" nillable="true" type="tns:ETCMessageTable" />
+  <xs:complexType name="ETCMessageRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/Ice" base="q24:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddrSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddrSourceID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Helplink" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefersTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Severity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ETCMessageRow" nillable="true" type="tns:ETCMessageRow" />
+  <xs:complexType name="OrdRelJobProdTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/Ice" base="q25:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="JobProd" nillable="true" type="tns:JobProdTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrdRelJobProdTableset" nillable="true" type="tns:OrdRelJobProdTableset" />
+  <xs:complexType name="JobProdTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobProdRow" nillable="true" type="tns:JobProdRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobProdTable" nillable="true" type="tns:JobProdTable" />
+  <xs:complexType name="JobProdRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/Ice" base="q26:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AsmPartDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AsmPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="CallLine" type="xs:int" />
+          <xs:element minOccurs="0" name="CallLineLineDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CallNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DemandContractNum" type="xs:int" />
+          <xs:element minOccurs="0" name="DemandDtlSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="DemandHeadSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="DemandLinkSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DemandLinkStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DemandScheduleSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="IUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JHPartDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JHPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JobNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JobNumPartDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MakeToJobQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MakeToStockQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MakeToType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaxAllowedQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MtlPartDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MtlPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrdWIPQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OrderLine" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderLineLineDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNumCardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNumCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderRelNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OurStockQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PartIUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartPartDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartPricePerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartSalesUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartSellingFactor" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PartTrackDimension" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartTrackLots" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PartTrackSerialNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PlanID" type="ser:guid" />
+          <xs:element minOccurs="0" name="PlanUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Plant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProdQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PullFromStockWarehouseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PullFromStockWarehouseDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceivedQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ShipBy" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ShippedQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SplitQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="StkWIPQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TFLineNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TFOrdLine" type="xs:int" />
+          <xs:element minOccurs="0" name="TFOrdNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TargetAssemblySeq" type="xs:int" />
+          <xs:element minOccurs="0" name="TargetJobNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TargetMtlSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="TotalSplitQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TrackSerialNumbers" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WIPQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarehouseCodeDescription" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobProdRow" nillable="true" type="tns:JobProdRow" />
+  <xs:complexType name="OrderHedListTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/Ice" base="q27:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OrderHedList" nillable="true" type="tns:OrderHedListTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderHedListTableset" nillable="true" type="tns:OrderHedListTableset" />
+  <xs:complexType name="OrderHedListTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderHedListRow" nillable="true" type="tns:OrderHedListRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderHedListTable" nillable="true" type="tns:OrderHedListTable" />
+  <xs:complexType name="OrderHedListRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/Ice" base="q28:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BTCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="BTCustNumCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTCustNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustOnCreditHold" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustomerBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DemandContract" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepositBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepositBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NeedByDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OpenOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderHeld" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PONum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VoidOrder" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderHedListRow" nillable="true" type="tns:OrderHedListRow" />
+  <xs:complexType name="OrdDtlQuoteQtyTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://schemas.datacontract.org/2004/07/Ice" base="q29:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="QuoteQty" nillable="true" type="tns:QuoteQtyTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrdDtlQuoteQtyTableset" nillable="true" type="tns:OrdDtlQuoteQtyTableset" />
+  <xs:complexType name="QuoteQtyTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QuoteQtyRow" nillable="true" type="tns:QuoteQtyRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuoteQtyTable" nillable="true" type="tns:QuoteQtyTable" />
+  <xs:complexType name="QuoteQtyRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/Ice" base="q30:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BaseCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="BurdenMarkUp" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcMarkupProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcProfitProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcUPCommMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcUPCommProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcUnitCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcUnitPriceMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CalcUnitPriceProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CommissionPct" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DisableMtlMarkup" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DocInUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocPricePerAdl1000" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalSellPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="LaborMarkUp" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MarkUpID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaterialMarkUp" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MaterialMarkupM" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MaterialMarkupP" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MiscChrg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MiscCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MiscCostDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MiscCostMarkUp" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MtlBurMarkUp" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OurQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PercentType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriceBurMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceBurProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceLbrMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceLbrProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceMscChrgMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceMscChrgProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceMtlBurMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceMtlBurProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceMtlMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceMtlProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PricePerAdl1000" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PricePerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PricePerFactor" type="xs:int" />
+          <xs:element minOccurs="0" name="PriceSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriceSubMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceSubProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceTotalCommMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceTotalCommProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceTotalMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceTotalProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="QtyNum" type="xs:int" />
+          <xs:element minOccurs="0" name="QuoteLine" type="xs:int" />
+          <xs:element minOccurs="0" name="QuoteLineLineDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuoteNum" type="xs:int" />
+          <xs:element minOccurs="0" name="QuoteNumCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuotedMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="QuotedProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RollUpCostNeeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Rpt1InUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SellingFactor" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SellingFactorDirection" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SellingQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SubcontractMarkUp" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TotalBurCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalCommProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalCommission" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalLbrCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalMarkup" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalMtlBurCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalMtlCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalProdBurHrs" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalProdLbrHrs" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalProfit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalQuotedPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalSellPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalSetupBurHrs" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalSetupLbrHrs" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalSubCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UserChangedUnitPrice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WQUnitPrice" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QuoteQtyRow" nillable="true" type="tns:QuoteQtyRow" />
+  <xs:complexType name="OrderCustTrkTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://schemas.datacontract.org/2004/07/Ice" base="q31:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OrderCustTrk" nillable="true" type="tns:OrderCustTrkTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderCustTrkTableset" nillable="true" type="tns:OrderCustTrkTableset" />
+  <xs:complexType name="OrderCustTrkTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderCustTrkRow" nillable="true" type="tns:OrderCustTrkRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderCustTrkTable" nillable="true" type="tns:OrderCustTrkTable" />
+  <xs:complexType name="OrderCustTrkRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/Ice" base="q32:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BTAddressList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="BTContactFaxNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTContactPhoneNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BTCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="BTCustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreditOverride" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="LineDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OnCreditHold" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OpenLine" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OpenOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderDtlNeedByDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderDtlRequestDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderHedNeedByDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderHedRequestDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderHeld" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderLine" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="POLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="POLineRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PONum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrcConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ProdCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProdCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RevisionNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SellingQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ShipToName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShpConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="SoldToCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToCustName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="XPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XRevisionNum" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderCustTrkRow" nillable="true" type="tns:OrderCustTrkRow" />
+  <xs:complexType name="SelectSerialNumbersParamsTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://schemas.datacontract.org/2004/07/Ice" base="q33:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SelectSerialNumbersParams" nillable="true" type="tns:SelectSerialNumbersParamsTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SelectSerialNumbersParamsTableset" nillable="true" type="tns:SelectSerialNumbersParamsTableset" />
+  <xs:complexType name="SelectSerialNumbersParamsTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SelectSerialNumbersParamsRow" nillable="true" type="tns:SelectSerialNumbersParamsRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectSerialNumbersParamsTable" nillable="true" type="tns:SelectSerialNumbersParamsTable" />
+  <xs:complexType name="SelectSerialNumbersParamsRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/Ice" base="q34:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="allowVoided" type="xs:boolean" />
+          <xs:element minOccurs="0" name="enableCreate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="enableRetrieve" type="xs:boolean" />
+          <xs:element minOccurs="0" name="enableSelect" type="xs:boolean" />
+          <xs:element minOccurs="0" name="partNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="plant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="poLinkValues" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="sourceRowID" type="ser:guid" />
+          <xs:element minOccurs="0" name="transType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="whereClause" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xrefCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="xrefPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xrefPartType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SelectSerialNumbersParamsRow" nillable="true" type="tns:SelectSerialNumbersParamsRow" />
+  <xs:complexType name="SOEntryUIParamsTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://schemas.datacontract.org/2004/07/Ice" base="q35:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SOEntryUIParams" nillable="true" type="tns:SOEntryUIParamsTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SOEntryUIParamsTableset" nillable="true" type="tns:SOEntryUIParamsTableset" />
+  <xs:complexType name="SOEntryUIParamsTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SOEntryUIParamsRow" nillable="true" type="tns:SOEntryUIParamsRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SOEntryUIParamsTable" nillable="true" type="tns:SOEntryUIParamsTable" />
+  <xs:complexType name="SOEntryUIParamsRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://schemas.datacontract.org/2004/07/Ice" base="q36:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CCAllowSales" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CCEnableAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CCEnableCSC" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CalcQtysPreference" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableICPOSugTool" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Localization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrjAllowWBSPhase" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SOReadyToCalcDflt" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SuppressSOMakeDirWrn" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UseTerritorySecurity" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SOEntryUIParamsRow" nillable="true" type="tns:SOEntryUIParamsRow" />
+  <xs:complexType name="UpdExtSalesOrderTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/Ice" base="q37:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HedTaxSum" nillable="true" type="tns:HedTaxSumTable" />
+          <xs:element minOccurs="0" name="OHOrderMsc" nillable="true" type="tns:OHOrderMscTable" />
+          <xs:element minOccurs="0" name="OrderDtl" nillable="true" type="tns:OrderDtlTable" />
+          <xs:element minOccurs="0" name="OrderDtlAttch" nillable="true" type="tns:OrderDtlAttchTable" />
+          <xs:element minOccurs="0" name="OrderHed" nillable="true" type="tns:OrderHedTable" />
+          <xs:element minOccurs="0" name="OrderHedAttch" nillable="true" type="tns:OrderHedAttchTable" />
+          <xs:element minOccurs="0" name="OrderHedUPS" nillable="true" type="tns:OrderHedUPSTable" />
+          <xs:element minOccurs="0" name="OrderHist" nillable="true" type="tns:OrderHistTable" />
+          <xs:element minOccurs="0" name="OrderMsc" nillable="true" type="tns:OrderMscTable" />
+          <xs:element minOccurs="0" name="OrderRel" nillable="true" type="tns:OrderRelTable" />
+          <xs:element minOccurs="0" name="OrderRelTax" nillable="true" type="tns:OrderRelTaxTable" />
+          <xs:element minOccurs="0" name="OrderRepComm" nillable="true" type="tns:OrderRepCommTable" />
+          <xs:element minOccurs="0" name="PartSubs" nillable="true" type="tns:PartSubsTable" />
+          <xs:element minOccurs="0" name="SNFormat" nillable="true" type="tns:SNFormatTable" />
+          <xs:element minOccurs="0" name="SelectedSerialNumbers" nillable="true" type="tns:SelectedSerialNumbersTable" />
+          <xs:element minOccurs="0" name="TaxConnectStatus" nillable="true" type="tns:TaxConnectStatusTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdExtSalesOrderTableset" nillable="true" type="tns:UpdExtSalesOrderTableset" />
+</xs:schema>

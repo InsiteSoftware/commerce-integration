@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Erp:BO:CreditTran" elementFormDefault="qualified" targetNamespace="Erp:BO:CreditTran" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" />
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+  <xs:element name="GetNewCreditTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q1:CreditTranTableset" />
+        <xs:element minOccurs="0" name="tranDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="tranTime" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCreditTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q2:CreditTranTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tranDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="tranTime" type="xs:int" />
+        <xs:element minOccurs="0" name="tranNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteByIDResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tranDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="tranTime" type="xs:int" />
+        <xs:element minOccurs="0" name="tranNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetByIDResult" nillable="true" type="q3:CreditTranTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="whereClause" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="absolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetListResult" nillable="true" type="q4:CreditTranListTableset" />
+        <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRows">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="whereClauseCreditTran" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="absolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRowsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetRowsResult" nillable="true" type="q5:CreditTranTableset" />
+        <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="id" type="q6:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetBySysRowIDResult" nillable="true" type="q7:CreditTranTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q8:ArrayOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetBySysRowIDsResult" nillable="true" type="q9:CreditTranTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q10:CreditTranTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q11:CreditTranTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q12:UpdExtCreditTranTableset" />
+        <xs:element minOccurs="0" name="continueProcessingOnError" type="xs:boolean" />
+        <xs:element minOccurs="0" name="rollbackParentOnChildError" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Ice" minOccurs="0" name="UpdateExtResult" nillable="true" type="q13:BOUpdErrorTableset" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q14:UpdExtCreditTranTableset" />
+        <xs:element minOccurs="0" name="errorsOccurred" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRowsContactTracker">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="whereClauseCreditTran" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseOrderHed" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contactName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="absolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRowsContactTrackerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetRowsContactTrackerResult" nillable="true" type="q15:CreditTranTableset" />
+        <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRowsForCreditCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WhereClause" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inHeadNum" type="xs:int" />
+        <xs:element minOccurs="0" name="inOrderNum" type="xs:int" />
+        <xs:element minOccurs="0" name="inCardProcess" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="AbsolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRowsForCreditCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetRowsForCreditCardResult" nillable="true" type="q16:CreditTranTableset" />
+        <xs:element minOccurs="0" name="MorePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,1665 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48</TargetFrameworks>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Services3">
+      <HintPath>..\..\..\Lib\Wse\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Service References\Epicor10CashGrpService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Update="Service References\Epicor10CashRecService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Update="Service References\Epicor10CreditTranService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Update="Service References\Epicor10CustCntService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Update="Service References\Epicor10CustomerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Update="Service References\Epicor10SalesOrderService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Update="Service References\Epicor10SessionModService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Update="Service References\Epicor10ShipToService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Update="Web References\Epicor9BomSearchService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Update="Web References\Epicor9ConfiguratorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Update="Web References\Epicor9DynamicQueryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Update="Web References\Epicor9PartService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\CashGrp.wsdl" />
+    <None Include="Service References\Epicor10CashGrpService\CashGrp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\CashGrp1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\CashGrp2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\CashGrp3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\CashGrp4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\CashGrp5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\CashGrp6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\CashGrpSvcFacade.wsdl" />
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.BeforeGetByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.BOUpdErrorTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.CashGrpListTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.CashGrpTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.GetGrpBankInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.GetGrpFiscalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.GetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.GetNewCashGrpForPIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.GetNewCashGrpForPIStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.GetNewCashGrpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.PrePostEPGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.PrePostGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.UpdateExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashGrpService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashGrpService.UpdExtCashGrpTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\CashRec.wsdl" />
+    <None Include="Service References\Epicor10CashRecService\CashRec.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\CashRec1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\CashRec2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\CashRec3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\CashRec4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\CashRec5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\CashRec6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\CashRecSvcFacade.wsdl" />
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ARInvcAllocTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ARInvSelTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.AssignLegalNumberBankRecResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.AssignLegalNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.BOUpdErrorTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.CalcTaxRecNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.CashHeadListTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.CashRecTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.CCClearResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.CCLoadTranDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.CCProcessCardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeBankAmountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeBankExchangeRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeBankReceiptExgRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeCCAmountsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeCreditExpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeDNAmountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeIncomeTaxCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeReceiptAmtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeReceiptCurrencyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeSettlementExgRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeTaxWhldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ChangeTranAmtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.CreateChecksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.CreateNewDebitNoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.DeleteMasterBankRecResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.DeleteMasterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.EnterCustDebNoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetBankFeeDefaultAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetByIDTrackerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetCashHeadDefaultAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetCurrencyInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetCustomerInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetDefaultLegalNumOptsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetDNInvInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetDtlDiscountInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetDtlInvoiceInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetDtlLegalNumberInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetDtlTranAmtInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetHdrInvoiceInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetHdrLegalNumberInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewBankTranByHeadNumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewBankTranResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewBankTranTaxDtlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewBankTranTGLCResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewCashDtlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewCashHeadAttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewCashHeadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewCashHeadTGLCResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewCashHeadTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewCDTaxDtlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewDebNoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetNewTaxDtlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetOrderInfo4DskCurrResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetOrderInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetRateCodeInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetSalesTaxInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetTaxableInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.GetTranAmtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.LeaveCashHeadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.MassApplyDebitNotesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.MassGenerateCashDtlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.OnChangeBankFeeIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.OnChangeTranDocTypeIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.RecalcBankTaxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.RecalcCDTaxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.RecalcTaxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.SetReadyToCalcResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.TakeDiscountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.UpdateAutoGenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.UpdateExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.UpdateMasterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.UpdExtCashRecTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CashRecService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CashRecService.ValidatePrintEditListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\CreditTran.wsdl" />
+    <None Include="Service References\Epicor10CreditTranService\CreditTran.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\CreditTran1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\CreditTran2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\CreditTran3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\CreditTran4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\CreditTran5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\CreditTran6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\CreditTranSvcFacade.wsdl" />
+    <None Include="Service References\Epicor10CreditTranService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CreditTranService.BOUpdErrorTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CreditTranService.CreditTranListTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CreditTranService.CreditTranTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CreditTranService.GetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CreditTranService.GetNewCreditTranResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CreditTranService.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CreditTranService.UpdateExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CreditTranService.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CreditTranService\Insite.Integration.WindowsService.Plugins.Epicor.Epicor10CreditTranService.UpdExtCreditTranTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\CustCnt.wsdl" />
+    <None Include="Service References\Epicor10CustCntService\CustCnt.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\CustCnt1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\CustCnt2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\CustCnt3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\CustCnt4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\CustCnt5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\CustCnt6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\CustCntSvcFacade.wsdl" />
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.BOUpdErrorTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.CustCntListTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.CustCntTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.DefaultNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.GetGlbCustCntListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.GetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.GetNewCustCntAttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.GetNewCustCntResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.GetPerConDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.GlbCustCntTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.LinkGlbCustCntResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.OnChangeAltShipToContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.SpecialAddressChangeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.UpdateECCCustCntResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.UpdateExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustCntService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustCntService.UpdExtCustCntTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Customer.wsdl" />
+    <None Include="Service References\Epicor10CustomerService\Customer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Customer1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Customer2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Customer3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Customer4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Customer5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Customer6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\CustomerSvcFacade.wsdl" />
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.BillToRefsTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.BOUpdErrorTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChangeCustDfltInvoiceTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChangeCustomerChargeCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChangeCustomerFinChargesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChangeCustomerReminderGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChangeDeferredRevResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChangeListCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChangeMandateReferenceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChangeRACodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.CheckRUCResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.CheckVATFormatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChgBTCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChgCountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChgGlobalCustResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ChgICTraderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.CustomerListTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.CustomerTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.DeleteBTAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ETCAddrValidationTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ETCAfterAddrValResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ETCValidateAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetAllShipToResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetCompanyDataForMandateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetCustomerDataForMandateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetCustomerTerritoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetListCustomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetListFromSelectedKeysResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustBankResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustBillToResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustChildResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustDfltDocTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustICResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustLabExpRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustMandateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustMFBillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustomerAttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustomerDiscPriceLstResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustomerDocsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustomerDocsSHResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustomerFSPriceListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustomerPriceLstResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustRestrictionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewCustUPSEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewEntityGLCResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewGlbCustCredResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewMangCustResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewPartnerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewShipToAttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewShipToDiscPriceLstResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewShipToLabExpRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewShipToMFBillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewShipToPriceLstResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewShipToResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewShipToRestrictionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewShipToUPSEmlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetNewTaxExemptResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetParentCustInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GetShipToTerritoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.GlbCustomerTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.LinkGlbCustBillToResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.LinkGlbCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.LinkGlbShipToResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ModifySearchIDsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.OnChangeAltShipToResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.OnChangeCreditCardOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.OnChangeCustBankPayMethodResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.OnChangeCustICPrimaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.OnChangeCustomerTaxRegionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.OnChangeofAltBTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.OnChangeofBankAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.OnChangeofCustomerAddrResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.OnChangeofShipToAddrResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.OnChangeShipToTaxRegionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.OnChangeVendorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.PreLinkGlbCustBillToResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.PreLinkGlbCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.PreLinkGlbShipToResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ResetShipToIntlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.SetUPSQVEnableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ShipToETCAfterAddrValResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ShipToETCValAddrResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.ShipToTerrSelectChangeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.SkipGlbCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.UnlinkGlbCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.UpdateCreditTotalsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.UpdateECCCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.UpdateExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.UpdateGlobalLimitsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10CustomerService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10CustomerService.UpdExtCustomerTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.BOUpdErrorTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CCClearResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CCLoadTranDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CCProcessCardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeBTCustIDMasterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeCardNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeCCAmountsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeCommissionableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeContractNumMasterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeContractNumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeCounterSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeCreditExpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeCurrencyCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangedCardNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeDiscBreakListCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeDiscountAmountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeDiscountPercentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeERSOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeHedUseOTSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeKitPricingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeKitQtyPerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeMakeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeManualTaxCalcResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeMiscAmountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeMiscCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeMiscPercentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeNeedByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeNewNeedByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeNewSellingQuantityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeODtlWarehouseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeOrderRelBuyToOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeOrderRelDropShipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeOrderRelMarkForNumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeOrderRelMFCustIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeOrderRelShipToContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeOrderRelShipToCustIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeOrderRelShipToResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeOrderRelUseOTMFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeOrderRelVendorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeORelWarehouseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeOverrideDiscPriceListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeOverridePriceListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangePartNumMasterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangePartNumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangePlantResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangePriceListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangePricePerCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeQuickEntryOptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeQuoteLineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeQuoteQtyNumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeRelUseOTSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeRenewalNbrMasterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeRenewalNbrResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeRevisionNumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeRevNumMasterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeRMANumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeSalesRepResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeSalesUOMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeSellingQtyMasterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeSellingQuantityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeSellingReqQtyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeShipToContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeShipToCustIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeShipToIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeSoldToContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeSoldToIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeUnitPriceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeVendorChangeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeWhseCodeMasterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ChangeXPartNumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckConfigurationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckCustomerCreditLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckCustomerCreditReleaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckCustOnCreditHoldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckLtrOfCrdtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckOrderHedChangesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckOrderHedDispatchReasonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckPartRevisionChangeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckProjectIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckQuoteForCreditLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckRateGrpCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckSellingFactorDirectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CheckSONumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CopyOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CreateGlbSugPOChgResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CreateLinesFromHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.CreateOrderDtlComplementsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ETCAddrValidationTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ETCValidateAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetBasePartForConfigResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetGlbSugPOChgResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetInventoryQuantitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetJobProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetKitComponentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetListCustomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetNewOHOrderMscResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetNewOrderDtlAttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetNewOrderDtlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetNewOrderHedAttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetNewOrderHedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetNewOrderHedUPSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetNewOrderMscResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetNewOrderRelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetNewOrderRelTaxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetNewSalesKitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetPayBTFlagDefaultsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetQuoteQtyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetRowsCustomerTrackerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GetSmartStringResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GlbSugPOChgTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.GlbSugPOChgUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.MasterUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.NegativeInventoryTestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeARLOCIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeCreditCardOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeofBTConNumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeofBTCustIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeOfFixedAmountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeOfMktgCampaignResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeOfMktgEvntResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeofPhaseIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeofSoldToCreditCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeOfTaxAmtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeOfTaxPercentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeofTaxRgnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeRateCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeTaxableAmtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OnChangeTaxCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OrdDtlQuoteQtyTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OrderCustTrkTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OrderDtlGetNewContractsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OrderDtlGetNewCounterSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OrderDtlGetNewFromQuoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OrderHedListTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.OrdRelJobProdTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.PhantomComponentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ProcessCounterSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ProcessQuickEntryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.RebuildShipUPSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.SalesOrderTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.SelectSerialNumbersParamsTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.SetReadyToCalcResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.SetUPSQVEnableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.SOEntryUIParamsTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.SubmitNewOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.UpdateExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.UpdExtSalesOrderTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ValidateInvQtyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SalesOrderService.ValidateSNsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\SalesOrder.wsdl" />
+    <None Include="Service References\Epicor10SalesOrderService\SalesOrder.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\SalesOrder1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\SalesOrder2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\SalesOrder3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\SalesOrder4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\SalesOrder5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\SalesOrder6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SalesOrderService\SalesOrderSvcFacade.wsdl" />
+    <None Include="Service References\Epicor10SessionModService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SessionModService.GetCountryGroupCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SessionModService.GetCurrentValuesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SessionModService.GetLicenseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SessionModService.SessionModTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SessionModService.SetCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10SessionModService.SyncResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\SessionMod.wsdl" />
+    <None Include="Service References\Epicor10SessionModService\SessionMod.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\SessionMod1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\SessionMod2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\SessionMod3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\SessionMod4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\SessionMod5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\SessionMod6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\SessionMod7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10SessionModService\SessionModSvcFacade.wsdl" />
+    <None Include="Service References\Epicor10ShipToService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10ShipToService.BOUpdErrorTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10ShipToService.GetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10ShipToService.GetNewShipToAttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10ShipToService.GetNewShipToLabExpRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10ShipToService.GetNewShipToResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10ShipToService.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10ShipToService.ShipToListTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10ShipToService.ShipToTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10ShipToService.UpdateExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10ShipToService.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\Insite.WindowsIntegrationPlugins.Epicor.Epicor10ShipToService.UpdExtShipToTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\ShipTo.wsdl" />
+    <None Include="Service References\Epicor10ShipToService\ShipTo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\ShipTo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\ShipTo2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\ShipTo3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\ShipTo4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\ShipTo5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\ShipTo6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor10ShipToService\ShipToSvcFacade.wsdl" />
+    <None Include="Web References\Epicor9BomSearchService\BomSearchDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9BomSearchService\BomSearchService.wsdl" />
+    <None Include="Web References\Epicor9BomSearchService\CallContextDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9BomSearchService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Epicor9ConfiguratorService\CallContextDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9ConfiguratorService\ConfiguratorDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9ConfiguratorService\ConfiguratorService.wsdl" />
+    <None Include="Web References\Epicor9ConfiguratorService\GlbInputVarListDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9ConfiguratorService\PCRulesBOMDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9ConfiguratorService\PcStatusListDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9ConfiguratorService\PcTempExprDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9ConfiguratorService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\ASPExportFieldDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\AvailableTableListDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\BAQRequestDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\CallContextDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\DynamicQueryListDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\DynamicQueryService.wsdl" />
+    <None Include="Web References\Epicor9DynamicQueryService\FieldListDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\FiscalPeriodListDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\ParsedTableDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\QueryDesignDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\QueryExecutionDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Epicor9DynamicQueryService\RelatedTableDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9PartService\CallContextDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9PartService\GlbPartDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9PartService\PartDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9PartService\PartListDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9PartService\PartService.wsdl" />
+    <None Include="Web References\Epicor9PartService\PartWhereUsedDataSetType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Epicor9PartService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Epicor9BomSearchService\BomSearchService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Epicor9ConfiguratorService\ConfiguratorService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Epicor9DynamicQueryService\DynamicQueryService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Epicor9PartService\PartService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10SessionModService\SessionMod.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10SessionModService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10SessionModService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10SessionModService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CustomerService\Customer.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CustomerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CustomerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CustomerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10ShipToService\ShipTo.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10ShipToService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10ShipToService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10ShipToService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CustCntService\CustCnt.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CustCntService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CustCntService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CustCntService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10SalesOrderService\SalesOrder.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10SalesOrderService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10SalesOrderService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10SalesOrderService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CashGrpService\CashGrp.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CashGrpService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CashGrpService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CashGrpService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CashRecService\CashRec.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CashRecService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CashRecService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CashRecService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CreditTranService\CreditTran.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CreditTranService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CreditTranService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor10CreditTranService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Insite.Common\Insite.Common.csproj" />
+    <ProjectReference Include="..\Insite.Integration\Insite.Integration.csproj" />
+    <ProjectReference Include="..\Insite.WIS.Broker\Insite.WIS.Broker.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="obj\x86\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+  </ItemGroup>
+</Project>

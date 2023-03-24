@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Insite.WIS.Broker\Insite.WIS.Broker.csproj" />
+    <ProjectReference Include="..\Insite.WIS.InRiver\Insite.WIS.InRiver.csproj" />
+  </ItemGroup>
+</Project>

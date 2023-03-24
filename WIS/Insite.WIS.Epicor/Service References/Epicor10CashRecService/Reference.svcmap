@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e9277f8c-bab6-471d-9f17-4c2e82337129" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CashRecSvcFacade.wsdl" MetadataType="Wsdl" ID="1a4c4bb4-e360-4b1b-8d64-5a18af9513a4" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?wsdl" />
+    <MetadataFile FileName="CashRec.wsdl" MetadataType="Wsdl" ID="84e76de6-86da-4c2b-83b9-39e1f580ced7" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CashRec.xsd" MetadataType="Schema" ID="d7863b9a-8776-4bda-9fe9-ec08f26312bb" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd2" />
+    <MetadataFile FileName="CashRec1.xsd" MetadataType="Schema" ID="8a07741b-57cf-4043-8fce-29d3c4a2dd6d" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd3" />
+    <MetadataFile FileName="CashRec2.xsd" MetadataType="Schema" ID="2d305223-ae00-4a4e-919a-888b31fa9762" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd0" />
+    <MetadataFile FileName="CashRec3.xsd" MetadataType="Schema" ID="7ae4c771-4c29-4afe-bb36-a263e272e1e0" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd1" />
+    <MetadataFile FileName="CashRec4.xsd" MetadataType="Schema" ID="63723c2b-96cf-4bcc-a0a4-4c17cf8e25d0" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd4" />
+    <MetadataFile FileName="CashRec5.xsd" MetadataType="Schema" ID="ec58951c-ee6b-4d7f-a4e1-7f0fc03019a5" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd5" />
+    <MetadataFile FileName="CashRec.disco" MetadataType="Disco" ID="2c0d435c-1d54-4cf9-95fa-20f0cc8d08fd" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?disco" />
+    <MetadataFile FileName="CashRec6.xsd" MetadataType="Schema" ID="b426b4a6-fd0b-4506-98d9-6accd54fc301" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

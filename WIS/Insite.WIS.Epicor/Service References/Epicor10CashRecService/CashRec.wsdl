@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Erp:BO:CashRec" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Erp:BO:CashRec" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Erp:BO:CashRec/Imports">
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd0" namespace="Erp:BO:CashRec" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Ice.Common" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Epicor.Data" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CashRecSvcContract_AssignLegalNumberBankRec_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignLegalNumberBankRec" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_AssignLegalNumberBankRec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignLegalNumberBankRecResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_AssignLegalNumberBankRec_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q1:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteMasterBankRec_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMasterBankRec" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteMasterBankRec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMasterBankRecResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteMasterBankRec_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q2:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHead_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashHead" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHead_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q3:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHeadAttch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashHeadAttch" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHeadAttch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashHeadAttchResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHeadAttch_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q4:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewBankTran" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewBankTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTran_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q5:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTranTaxDtl_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewBankTranTaxDtl" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTranTaxDtl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewBankTranTaxDtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTranTaxDtl_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q6:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTranTGLC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewBankTranTGLC" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTranTGLC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewBankTranTGLCResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTranTGLC_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q7:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewDebNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewDebNote" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewDebNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewDebNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewDebNote_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q8:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashDtl_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashDtl" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashDtl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashDtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashDtl_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q9:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCDTaxDtl_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCDTaxDtl" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCDTaxDtl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCDTaxDtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCDTaxDtl_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q10:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHeadTGLC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashHeadTGLC" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHeadTGLC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashHeadTGLCResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHeadTGLC_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q11:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewTaxDtl_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewTaxDtl" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewTaxDtl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewTaxDtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewTaxDtl_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q12:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteByID" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q13:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByID" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q14:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetList" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetList_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q15:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRows" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetRows_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q16:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetBySysRowID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowID" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetBySysRowID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetBySysRowID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q17:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetBySysRowIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDs" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetBySysRowIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetBySysRowIDs_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q18:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_Update_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q19:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_UpdateExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExt" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_UpdateExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_UpdateExt_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q20:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_IsUnAppliedDNExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUnAppliedDNExists" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_IsUnAppliedDNExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUnAppliedDNExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_IsUnAppliedDNExists_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q21:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_AssignLegalNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignLegalNumber" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_AssignLegalNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignLegalNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_AssignLegalNumber_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q22:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetByIDTracker_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIDTracker" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetByIDTracker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIDTrackerResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetByIDTracker_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q23:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CalcTaxRecNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalcTaxRecNumber" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CalcTaxRecNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcTaxRecNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CalcTaxRecNumber_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q24:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CashRecGetInvoices_InputMessage">
+    <wsdl:part name="parameters" element="tns:CashRecGetInvoices" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CashRecGetInvoices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CashRecGetInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CashRecGetInvoices_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q25:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CCClear_InputMessage">
+    <wsdl:part name="parameters" element="tns:CCClear" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CCClear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CCClearResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CCClear_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q26:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CCLoadTranData_InputMessage">
+    <wsdl:part name="parameters" element="tns:CCLoadTranData" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CCLoadTranData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CCLoadTranDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CCLoadTranData_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q27:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CCProcessCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:CCProcessCard" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CCProcessCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CCProcessCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CCProcessCard_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q28:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeBankAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeBankAmount" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeBankAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeBankAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeBankAmount_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q29:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeBankExchangeRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeBankExchangeRate" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeBankExchangeRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeBankExchangeRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeBankExchangeRate_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q30:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeBankReceiptExgRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeBankReceiptExgRate" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeBankReceiptExgRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeBankReceiptExgRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeBankReceiptExgRate_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q31:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeCCAmounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeCCAmounts" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeCCAmounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeCCAmountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeCCAmounts_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q32:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeCreditExp_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeCreditExp" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeCreditExp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeCreditExpResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeCreditExp_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q33:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeDNAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeDNAmount" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeDNAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeDNAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeDNAmount_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q34:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeIncomeTaxCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeIncomeTaxCode" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeIncomeTaxCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeIncomeTaxCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeIncomeTaxCode_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q35:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeReceiptAmt_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeReceiptAmt" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeReceiptAmt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeReceiptAmtResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeReceiptAmt_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q36:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeReceiptCurrency_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeReceiptCurrency" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeReceiptCurrency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeReceiptCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeReceiptCurrency_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q37:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeSettlementExgRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeSettlementExgRate" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeSettlementExgRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeSettlementExgRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeSettlementExgRate_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q38:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeTaxWhld_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeTaxWhld" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeTaxWhld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeTaxWhldResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeTaxWhld_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q39:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeTranAmt_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeTranAmt" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeTranAmt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeTranAmtResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ChangeTranAmt_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q40:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CheckDocumentIsLocked_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDocumentIsLocked" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CheckDocumentIsLocked_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDocumentIsLockedResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CheckDocumentIsLocked_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q41:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CreateChecks_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateChecks" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CreateChecks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateChecksResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CreateChecks_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q42:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CreateNewDebitNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewDebitNote" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CreateNewDebitNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewDebitNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_CreateNewDebitNote_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q43:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMaster" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteMaster_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q44:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteNegativeReceipts_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNegativeReceipts" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteNegativeReceipts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNegativeReceiptsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_DeleteNegativeReceipts_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q45:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_EnterCustDebNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnterCustDebNote" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_EnterCustDebNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnterCustDebNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_EnterCustDebNote_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q46:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GenerateCashDtl_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateCashDtl" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GenerateCashDtl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateCashDtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GenerateCashDtl_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q47:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetAdjAmtTax_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdjAmtTax" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetAdjAmtTax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdjAmtTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetAdjAmtTax_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q48:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetBankFeeDefaultAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankFeeDefaultAccount" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetBankFeeDefaultAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankFeeDefaultAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetBankFeeDefaultAccount_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q49:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCashHeadDefaultAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCashHeadDefaultAccount" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCashHeadDefaultAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCashHeadDefaultAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCashHeadDefaultAccount_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q50:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCurrencyInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCurrencyInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCurrencyInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q51:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCustomerInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCustomerInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCustomerInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q52:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDefaultLegalNumOpts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultLegalNumOpts" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDefaultLegalNumOpts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultLegalNumOptsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDefaultLegalNumOpts_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q53:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDNInvInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDNInvInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDNInvInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDNInvInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDNInvInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q54:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlDiscountInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDtlDiscountInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlDiscountInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDtlDiscountInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlDiscountInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q55:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlInvoiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDtlInvoiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlInvoiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDtlInvoiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlInvoiceInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q56:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlLegalNumberInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDtlLegalNumberInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlLegalNumberInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDtlLegalNumberInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlLegalNumberInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q57:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlTranAmtInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDtlTranAmtInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlTranAmtInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDtlTranAmtInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlTranAmtInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q58:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlTranAmtInfoExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDtlTranAmtInfoExt" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlTranAmtInfoExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDtlTranAmtInfoExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetDtlTranAmtInfoExt_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q59:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetHdrInvoiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdrInvoiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetHdrInvoiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdrInvoiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetHdrInvoiceInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q60:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetHdrLegalNumberInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdrLegalNumberInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetHdrLegalNumberInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdrLegalNumberInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetHdrLegalNumberInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q61:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTranByHeadNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewBankTranByHeadNum" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTranByHeadNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewBankTranByHeadNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewBankTranByHeadNum_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q62:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHeadType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashHeadType" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHeadType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCashHeadTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetNewCashHeadType_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q63:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetOrderInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetOrderInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetOrderInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q64:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetOrderInfo4DskCurr_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderInfo4DskCurr" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetOrderInfo4DskCurr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderInfo4DskCurrResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetOrderInfo4DskCurr_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q65:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetRateCodeInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateCodeInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetRateCodeInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateCodeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetRateCodeInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q66:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetSalesTaxInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesTaxInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetSalesTaxInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesTaxInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetSalesTaxInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q67:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetTaxableInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaxableInfo" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetTaxableInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaxableInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetTaxableInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q68:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetTranAmt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTranAmt" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetTranAmt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTranAmtResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetTranAmt_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q69:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_IsDueDateHighLighted_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsDueDateHighLighted" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_IsDueDateHighLighted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsDueDateHighLightedResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_IsDueDateHighLighted_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q70:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_LeaveCashHead_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveCashHead" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_LeaveCashHead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveCashHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_LeaveCashHead_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q71:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_MassApplyDebitNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:MassApplyDebitNotes" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_MassApplyDebitNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MassApplyDebitNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_MassApplyDebitNotes_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q72:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_MassDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:MassDelete" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_MassDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MassDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_MassDelete_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q73:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_MassGenerateCashDtl_InputMessage">
+    <wsdl:part name="parameters" element="tns:MassGenerateCashDtl" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_MassGenerateCashDtl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MassGenerateCashDtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_MassGenerateCashDtl_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q74:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_OnChangeBankFeeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnChangeBankFeeID" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_OnChangeBankFeeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnChangeBankFeeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_OnChangeBankFeeID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q75:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_OnChangeTranDocTypeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnChangeTranDocTypeID" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_OnChangeTranDocTypeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnChangeTranDocTypeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_OnChangeTranDocTypeID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q76:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_RecalcBankTax_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecalcBankTax" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_RecalcBankTax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecalcBankTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_RecalcBankTax_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q77:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_RecalcCDTax_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecalcCDTax" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_RecalcCDTax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecalcCDTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_RecalcCDTax_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q78:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_RecalcTax_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecalcTax" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_RecalcTax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecalcTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_RecalcTax_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q79:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ReverseCashReceipt_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseCashReceipt" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ReverseCashReceipt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseCashReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ReverseCashReceipt_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q80:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_SelectInvoices_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectInvoices" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_SelectInvoices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_SelectInvoices_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q81:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_SetReadyToCalc_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetReadyToCalc" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_SetReadyToCalc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetReadyToCalcResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_SetReadyToCalc_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q82:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_TakeDiscount_InputMessage">
+    <wsdl:part name="parameters" element="tns:TakeDiscount" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_TakeDiscount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TakeDiscountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_TakeDiscount_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q83="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q83:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_UpdateAutoGen_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAutoGen" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_UpdateAutoGen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAutoGenResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_UpdateAutoGen_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q84:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_UpdateMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMaster" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_UpdateMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_UpdateMaster_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q85="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q85:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCodeDescList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCodeDescList" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCodeDescList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCodeDescListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_GetCodeDescList_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q86="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q86:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ValidatePrintEditList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePrintEditList" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ValidatePrintEditList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePrintEditListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CashRecSvcContract_ValidatePrintEditList_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q87="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q87:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:portType name="CashRecSvcContract">
+    <wsdl:operation name="AssignLegalNumberBankRec">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/AssignLegalNumberBankRec" message="tns:CashRecSvcContract_AssignLegalNumberBankRec_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/AssignLegalNumberBankRecResponse" message="tns:CashRecSvcContract_AssignLegalNumberBankRec_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/AssignLegalNumberBankRecEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_AssignLegalNumberBankRec_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMasterBankRec">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteMasterBankRec" message="tns:CashRecSvcContract_DeleteMasterBankRec_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteMasterBankRecResponse" message="tns:CashRecSvcContract_DeleteMasterBankRec_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteMasterBankRecEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_DeleteMasterBankRec_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCashHead">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHead" message="tns:CashRecSvcContract_GetNewCashHead_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHeadResponse" message="tns:CashRecSvcContract_GetNewCashHead_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHeadEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewCashHead_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCashHeadAttch">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHeadAttch" message="tns:CashRecSvcContract_GetNewCashHeadAttch_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHeadAttchResponse" message="tns:CashRecSvcContract_GetNewCashHeadAttch_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHeadAttchEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewCashHeadAttch_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewBankTran">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTran" message="tns:CashRecSvcContract_GetNewBankTran_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTranResponse" message="tns:CashRecSvcContract_GetNewBankTran_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTranEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewBankTran_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewBankTranTaxDtl">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTranTaxDtl" message="tns:CashRecSvcContract_GetNewBankTranTaxDtl_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTranTaxDtlResponse" message="tns:CashRecSvcContract_GetNewBankTranTaxDtl_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTranTaxDtlEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewBankTranTaxDtl_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewBankTranTGLC">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTranTGLC" message="tns:CashRecSvcContract_GetNewBankTranTGLC_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTranTGLCResponse" message="tns:CashRecSvcContract_GetNewBankTranTGLC_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTranTGLCEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewBankTranTGLC_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDebNote">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewDebNote" message="tns:CashRecSvcContract_GetNewDebNote_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewDebNoteResponse" message="tns:CashRecSvcContract_GetNewDebNote_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewDebNoteEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewDebNote_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCashDtl">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashDtl" message="tns:CashRecSvcContract_GetNewCashDtl_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashDtlResponse" message="tns:CashRecSvcContract_GetNewCashDtl_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashDtlEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewCashDtl_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCDTaxDtl">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCDTaxDtl" message="tns:CashRecSvcContract_GetNewCDTaxDtl_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCDTaxDtlResponse" message="tns:CashRecSvcContract_GetNewCDTaxDtl_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCDTaxDtlEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewCDTaxDtl_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCashHeadTGLC">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHeadTGLC" message="tns:CashRecSvcContract_GetNewCashHeadTGLC_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHeadTGLCResponse" message="tns:CashRecSvcContract_GetNewCashHeadTGLC_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHeadTGLCEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewCashHeadTGLC_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewTaxDtl">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewTaxDtl" message="tns:CashRecSvcContract_GetNewTaxDtl_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewTaxDtlResponse" message="tns:CashRecSvcContract_GetNewTaxDtl_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewTaxDtlEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewTaxDtl_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByID">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteByID" message="tns:CashRecSvcContract_DeleteByID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteByIDResponse" message="tns:CashRecSvcContract_DeleteByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_DeleteByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetByID" message="tns:CashRecSvcContract_GetByID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetByIDResponse" message="tns:CashRecSvcContract_GetByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetList" message="tns:CashRecSvcContract_GetList_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetListResponse" message="tns:CashRecSvcContract_GetList_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetListEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetList_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetRows" message="tns:CashRecSvcContract_GetRows_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetRowsResponse" message="tns:CashRecSvcContract_GetRows_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetRowsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetRows_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowID">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetBySysRowID" message="tns:CashRecSvcContract_GetBySysRowID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetBySysRowIDResponse" message="tns:CashRecSvcContract_GetBySysRowID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetBySysRowIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetBySysRowID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowIDs">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetBySysRowIDs" message="tns:CashRecSvcContract_GetBySysRowIDs_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetBySysRowIDsResponse" message="tns:CashRecSvcContract_GetBySysRowIDs_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetBySysRowIDsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetBySysRowIDs_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/Update" message="tns:CashRecSvcContract_Update_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/UpdateResponse" message="tns:CashRecSvcContract_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/UpdateEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_Update_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExt">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/UpdateExt" message="tns:CashRecSvcContract_UpdateExt_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/UpdateExtResponse" message="tns:CashRecSvcContract_UpdateExt_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/UpdateExtEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_UpdateExt_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUnAppliedDNExists">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/IsUnAppliedDNExists" message="tns:CashRecSvcContract_IsUnAppliedDNExists_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/IsUnAppliedDNExistsResponse" message="tns:CashRecSvcContract_IsUnAppliedDNExists_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/IsUnAppliedDNExistsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_IsUnAppliedDNExists_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignLegalNumber">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/AssignLegalNumber" message="tns:CashRecSvcContract_AssignLegalNumber_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/AssignLegalNumberResponse" message="tns:CashRecSvcContract_AssignLegalNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/AssignLegalNumberEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_AssignLegalNumber_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByIDTracker">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetByIDTracker" message="tns:CashRecSvcContract_GetByIDTracker_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetByIDTrackerResponse" message="tns:CashRecSvcContract_GetByIDTracker_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetByIDTrackerEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetByIDTracker_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcTaxRecNumber">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CalcTaxRecNumber" message="tns:CashRecSvcContract_CalcTaxRecNumber_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CalcTaxRecNumberResponse" message="tns:CashRecSvcContract_CalcTaxRecNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CalcTaxRecNumberEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_CalcTaxRecNumber_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CashRecGetInvoices">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CashRecGetInvoices" message="tns:CashRecSvcContract_CashRecGetInvoices_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CashRecGetInvoicesResponse" message="tns:CashRecSvcContract_CashRecGetInvoices_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CashRecGetInvoicesEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_CashRecGetInvoices_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CCClear">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CCClear" message="tns:CashRecSvcContract_CCClear_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CCClearResponse" message="tns:CashRecSvcContract_CCClear_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CCClearEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_CCClear_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CCLoadTranData">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CCLoadTranData" message="tns:CashRecSvcContract_CCLoadTranData_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CCLoadTranDataResponse" message="tns:CashRecSvcContract_CCLoadTranData_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CCLoadTranDataEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_CCLoadTranData_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CCProcessCard">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CCProcessCard" message="tns:CashRecSvcContract_CCProcessCard_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CCProcessCardResponse" message="tns:CashRecSvcContract_CCProcessCard_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CCProcessCardEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_CCProcessCard_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeBankAmount">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeBankAmount" message="tns:CashRecSvcContract_ChangeBankAmount_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeBankAmountResponse" message="tns:CashRecSvcContract_ChangeBankAmount_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeBankAmountEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeBankAmount_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeBankExchangeRate">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeBankExchangeRate" message="tns:CashRecSvcContract_ChangeBankExchangeRate_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeBankExchangeRateResponse" message="tns:CashRecSvcContract_ChangeBankExchangeRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeBankExchangeRateEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeBankExchangeRate_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeBankReceiptExgRate">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeBankReceiptExgRate" message="tns:CashRecSvcContract_ChangeBankReceiptExgRate_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeBankReceiptExgRateResponse" message="tns:CashRecSvcContract_ChangeBankReceiptExgRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeBankReceiptExgRateEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeBankReceiptExgRate_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCCAmounts">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeCCAmounts" message="tns:CashRecSvcContract_ChangeCCAmounts_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeCCAmountsResponse" message="tns:CashRecSvcContract_ChangeCCAmounts_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeCCAmountsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeCCAmounts_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCreditExp">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeCreditExp" message="tns:CashRecSvcContract_ChangeCreditExp_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeCreditExpResponse" message="tns:CashRecSvcContract_ChangeCreditExp_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeCreditExpEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeCreditExp_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeDNAmount">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeDNAmount" message="tns:CashRecSvcContract_ChangeDNAmount_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeDNAmountResponse" message="tns:CashRecSvcContract_ChangeDNAmount_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeDNAmountEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeDNAmount_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeIncomeTaxCode">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeIncomeTaxCode" message="tns:CashRecSvcContract_ChangeIncomeTaxCode_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeIncomeTaxCodeResponse" message="tns:CashRecSvcContract_ChangeIncomeTaxCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeIncomeTaxCodeEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeIncomeTaxCode_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeReceiptAmt">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeReceiptAmt" message="tns:CashRecSvcContract_ChangeReceiptAmt_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeReceiptAmtResponse" message="tns:CashRecSvcContract_ChangeReceiptAmt_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeReceiptAmtEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeReceiptAmt_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeReceiptCurrency">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeReceiptCurrency" message="tns:CashRecSvcContract_ChangeReceiptCurrency_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeReceiptCurrencyResponse" message="tns:CashRecSvcContract_ChangeReceiptCurrency_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeReceiptCurrencyEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeReceiptCurrency_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSettlementExgRate">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeSettlementExgRate" message="tns:CashRecSvcContract_ChangeSettlementExgRate_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeSettlementExgRateResponse" message="tns:CashRecSvcContract_ChangeSettlementExgRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeSettlementExgRateEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeSettlementExgRate_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeTaxWhld">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeTaxWhld" message="tns:CashRecSvcContract_ChangeTaxWhld_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeTaxWhldResponse" message="tns:CashRecSvcContract_ChangeTaxWhld_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeTaxWhldEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeTaxWhld_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeTranAmt">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeTranAmt" message="tns:CashRecSvcContract_ChangeTranAmt_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeTranAmtResponse" message="tns:CashRecSvcContract_ChangeTranAmt_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ChangeTranAmtEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ChangeTranAmt_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocumentIsLocked">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CheckDocumentIsLocked" message="tns:CashRecSvcContract_CheckDocumentIsLocked_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CheckDocumentIsLockedResponse" message="tns:CashRecSvcContract_CheckDocumentIsLocked_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CheckDocumentIsLockedEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_CheckDocumentIsLocked_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateChecks">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CreateChecks" message="tns:CashRecSvcContract_CreateChecks_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CreateChecksResponse" message="tns:CashRecSvcContract_CreateChecks_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CreateChecksEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_CreateChecks_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewDebitNote">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CreateNewDebitNote" message="tns:CashRecSvcContract_CreateNewDebitNote_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CreateNewDebitNoteResponse" message="tns:CashRecSvcContract_CreateNewDebitNote_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/CreateNewDebitNoteEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_CreateNewDebitNote_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaster">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteMaster" message="tns:CashRecSvcContract_DeleteMaster_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteMasterResponse" message="tns:CashRecSvcContract_DeleteMaster_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteMasterEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_DeleteMaster_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNegativeReceipts">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteNegativeReceipts" message="tns:CashRecSvcContract_DeleteNegativeReceipts_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteNegativeReceiptsResponse" message="tns:CashRecSvcContract_DeleteNegativeReceipts_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/DeleteNegativeReceiptsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_DeleteNegativeReceipts_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnterCustDebNote">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/EnterCustDebNote" message="tns:CashRecSvcContract_EnterCustDebNote_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/EnterCustDebNoteResponse" message="tns:CashRecSvcContract_EnterCustDebNote_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/EnterCustDebNoteEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_EnterCustDebNote_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCashDtl">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GenerateCashDtl" message="tns:CashRecSvcContract_GenerateCashDtl_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GenerateCashDtlResponse" message="tns:CashRecSvcContract_GenerateCashDtl_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GenerateCashDtlEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GenerateCashDtl_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjAmtTax">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetAdjAmtTax" message="tns:CashRecSvcContract_GetAdjAmtTax_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetAdjAmtTaxResponse" message="tns:CashRecSvcContract_GetAdjAmtTax_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetAdjAmtTaxEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetAdjAmtTax_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankFeeDefaultAccount">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetBankFeeDefaultAccount" message="tns:CashRecSvcContract_GetBankFeeDefaultAccount_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetBankFeeDefaultAccountResponse" message="tns:CashRecSvcContract_GetBankFeeDefaultAccount_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetBankFeeDefaultAccountEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetBankFeeDefaultAccount_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCashHeadDefaultAccount">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCashHeadDefaultAccount" message="tns:CashRecSvcContract_GetCashHeadDefaultAccount_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCashHeadDefaultAccountResponse" message="tns:CashRecSvcContract_GetCashHeadDefaultAccount_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCashHeadDefaultAccountEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetCashHeadDefaultAccount_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCurrencyInfo" message="tns:CashRecSvcContract_GetCurrencyInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCurrencyInfoResponse" message="tns:CashRecSvcContract_GetCurrencyInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCurrencyInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetCurrencyInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCustomerInfo" message="tns:CashRecSvcContract_GetCustomerInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCustomerInfoResponse" message="tns:CashRecSvcContract_GetCustomerInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCustomerInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetCustomerInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultLegalNumOpts">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDefaultLegalNumOpts" message="tns:CashRecSvcContract_GetDefaultLegalNumOpts_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDefaultLegalNumOptsResponse" message="tns:CashRecSvcContract_GetDefaultLegalNumOpts_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDefaultLegalNumOptsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetDefaultLegalNumOpts_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDNInvInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDNInvInfo" message="tns:CashRecSvcContract_GetDNInvInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDNInvInfoResponse" message="tns:CashRecSvcContract_GetDNInvInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDNInvInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetDNInvInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDtlDiscountInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlDiscountInfo" message="tns:CashRecSvcContract_GetDtlDiscountInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlDiscountInfoResponse" message="tns:CashRecSvcContract_GetDtlDiscountInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlDiscountInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetDtlDiscountInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDtlInvoiceInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlInvoiceInfo" message="tns:CashRecSvcContract_GetDtlInvoiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlInvoiceInfoResponse" message="tns:CashRecSvcContract_GetDtlInvoiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlInvoiceInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetDtlInvoiceInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDtlLegalNumberInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlLegalNumberInfo" message="tns:CashRecSvcContract_GetDtlLegalNumberInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlLegalNumberInfoResponse" message="tns:CashRecSvcContract_GetDtlLegalNumberInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlLegalNumberInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetDtlLegalNumberInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDtlTranAmtInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlTranAmtInfo" message="tns:CashRecSvcContract_GetDtlTranAmtInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlTranAmtInfoResponse" message="tns:CashRecSvcContract_GetDtlTranAmtInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlTranAmtInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetDtlTranAmtInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDtlTranAmtInfoExt">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlTranAmtInfoExt" message="tns:CashRecSvcContract_GetDtlTranAmtInfoExt_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlTranAmtInfoExtResponse" message="tns:CashRecSvcContract_GetDtlTranAmtInfoExt_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetDtlTranAmtInfoExtEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetDtlTranAmtInfoExt_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHdrInvoiceInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetHdrInvoiceInfo" message="tns:CashRecSvcContract_GetHdrInvoiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetHdrInvoiceInfoResponse" message="tns:CashRecSvcContract_GetHdrInvoiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetHdrInvoiceInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetHdrInvoiceInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHdrLegalNumberInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetHdrLegalNumberInfo" message="tns:CashRecSvcContract_GetHdrLegalNumberInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetHdrLegalNumberInfoResponse" message="tns:CashRecSvcContract_GetHdrLegalNumberInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetHdrLegalNumberInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetHdrLegalNumberInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewBankTranByHeadNum">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTranByHeadNum" message="tns:CashRecSvcContract_GetNewBankTranByHeadNum_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTranByHeadNumResponse" message="tns:CashRecSvcContract_GetNewBankTranByHeadNum_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewBankTranByHeadNumEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewBankTranByHeadNum_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCashHeadType">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHeadType" message="tns:CashRecSvcContract_GetNewCashHeadType_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHeadTypeResponse" message="tns:CashRecSvcContract_GetNewCashHeadType_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetNewCashHeadTypeEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetNewCashHeadType_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetOrderInfo" message="tns:CashRecSvcContract_GetOrderInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetOrderInfoResponse" message="tns:CashRecSvcContract_GetOrderInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetOrderInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetOrderInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderInfo4DskCurr">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetOrderInfo4DskCurr" message="tns:CashRecSvcContract_GetOrderInfo4DskCurr_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetOrderInfo4DskCurrResponse" message="tns:CashRecSvcContract_GetOrderInfo4DskCurr_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetOrderInfo4DskCurrEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetOrderInfo4DskCurr_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRateCodeInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetRateCodeInfo" message="tns:CashRecSvcContract_GetRateCodeInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetRateCodeInfoResponse" message="tns:CashRecSvcContract_GetRateCodeInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetRateCodeInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetRateCodeInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesTaxInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetSalesTaxInfo" message="tns:CashRecSvcContract_GetSalesTaxInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetSalesTaxInfoResponse" message="tns:CashRecSvcContract_GetSalesTaxInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetSalesTaxInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetSalesTaxInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxableInfo">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetTaxableInfo" message="tns:CashRecSvcContract_GetTaxableInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetTaxableInfoResponse" message="tns:CashRecSvcContract_GetTaxableInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetTaxableInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetTaxableInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTranAmt">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetTranAmt" message="tns:CashRecSvcContract_GetTranAmt_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetTranAmtResponse" message="tns:CashRecSvcContract_GetTranAmt_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetTranAmtEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetTranAmt_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsDueDateHighLighted">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/IsDueDateHighLighted" message="tns:CashRecSvcContract_IsDueDateHighLighted_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/IsDueDateHighLightedResponse" message="tns:CashRecSvcContract_IsDueDateHighLighted_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/IsDueDateHighLightedEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_IsDueDateHighLighted_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeaveCashHead">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/LeaveCashHead" message="tns:CashRecSvcContract_LeaveCashHead_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/LeaveCashHeadResponse" message="tns:CashRecSvcContract_LeaveCashHead_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/LeaveCashHeadEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_LeaveCashHead_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MassApplyDebitNotes">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/MassApplyDebitNotes" message="tns:CashRecSvcContract_MassApplyDebitNotes_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/MassApplyDebitNotesResponse" message="tns:CashRecSvcContract_MassApplyDebitNotes_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/MassApplyDebitNotesEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_MassApplyDebitNotes_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MassDelete">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/MassDelete" message="tns:CashRecSvcContract_MassDelete_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/MassDeleteResponse" message="tns:CashRecSvcContract_MassDelete_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/MassDeleteEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_MassDelete_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MassGenerateCashDtl">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/MassGenerateCashDtl" message="tns:CashRecSvcContract_MassGenerateCashDtl_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/MassGenerateCashDtlResponse" message="tns:CashRecSvcContract_MassGenerateCashDtl_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/MassGenerateCashDtlEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_MassGenerateCashDtl_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnChangeBankFeeID">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/OnChangeBankFeeID" message="tns:CashRecSvcContract_OnChangeBankFeeID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/OnChangeBankFeeIDResponse" message="tns:CashRecSvcContract_OnChangeBankFeeID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/OnChangeBankFeeIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_OnChangeBankFeeID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnChangeTranDocTypeID">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/OnChangeTranDocTypeID" message="tns:CashRecSvcContract_OnChangeTranDocTypeID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/OnChangeTranDocTypeIDResponse" message="tns:CashRecSvcContract_OnChangeTranDocTypeID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/OnChangeTranDocTypeIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_OnChangeTranDocTypeID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecalcBankTax">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/RecalcBankTax" message="tns:CashRecSvcContract_RecalcBankTax_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/RecalcBankTaxResponse" message="tns:CashRecSvcContract_RecalcBankTax_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/RecalcBankTaxEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_RecalcBankTax_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecalcCDTax">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/RecalcCDTax" message="tns:CashRecSvcContract_RecalcCDTax_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/RecalcCDTaxResponse" message="tns:CashRecSvcContract_RecalcCDTax_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/RecalcCDTaxEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_RecalcCDTax_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecalcTax">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/RecalcTax" message="tns:CashRecSvcContract_RecalcTax_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/RecalcTaxResponse" message="tns:CashRecSvcContract_RecalcTax_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/RecalcTaxEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_RecalcTax_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReverseCashReceipt">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ReverseCashReceipt" message="tns:CashRecSvcContract_ReverseCashReceipt_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ReverseCashReceiptResponse" message="tns:CashRecSvcContract_ReverseCashReceipt_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ReverseCashReceiptEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ReverseCashReceipt_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectInvoices">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/SelectInvoices" message="tns:CashRecSvcContract_SelectInvoices_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/SelectInvoicesResponse" message="tns:CashRecSvcContract_SelectInvoices_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/SelectInvoicesEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_SelectInvoices_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetReadyToCalc">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/SetReadyToCalc" message="tns:CashRecSvcContract_SetReadyToCalc_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/SetReadyToCalcResponse" message="tns:CashRecSvcContract_SetReadyToCalc_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/SetReadyToCalcEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_SetReadyToCalc_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TakeDiscount">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/TakeDiscount" message="tns:CashRecSvcContract_TakeDiscount_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/TakeDiscountResponse" message="tns:CashRecSvcContract_TakeDiscount_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/TakeDiscountEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_TakeDiscount_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAutoGen">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/UpdateAutoGen" message="tns:CashRecSvcContract_UpdateAutoGen_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/UpdateAutoGenResponse" message="tns:CashRecSvcContract_UpdateAutoGen_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/UpdateAutoGenEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_UpdateAutoGen_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMaster">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/UpdateMaster" message="tns:CashRecSvcContract_UpdateMaster_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/UpdateMasterResponse" message="tns:CashRecSvcContract_UpdateMaster_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/UpdateMasterEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_UpdateMaster_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescList">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCodeDescList" message="tns:CashRecSvcContract_GetCodeDescList_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCodeDescListResponse" message="tns:CashRecSvcContract_GetCodeDescList_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/GetCodeDescListEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_GetCodeDescList_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePrintEditList">
+      <wsdl:input wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ValidatePrintEditList" message="tns:CashRecSvcContract_ValidatePrintEditList_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ValidatePrintEditListResponse" message="tns:CashRecSvcContract_ValidatePrintEditList_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CashRec/CashRecSvcContract/ValidatePrintEditListEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CashRecSvcContract_ValidatePrintEditList_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

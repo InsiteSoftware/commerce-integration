@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Data\Insite.Data.Entities\Insite.Data.Entities.csproj" />
+    <ProjectReference Include="..\..\..\Insite.Common\Insite.Common.csproj" />
+    <ProjectReference Include="..\..\..\Insite.Core.TestHelpers\Insite.Core.TestHelpers.csproj" />
+    <ProjectReference Include="..\..\Insite.Integration.TestHelpers\Insite.Integration.TestHelpers.csproj" />
+    <ProjectReference Include="..\..\Insite.WIS.Acumatica\Insite.WIS.Acumatica.csproj" />
+    <ProjectReference Include="..\..\Insite.WIS.Broker\Insite.WIS.Broker.csproj" />
+  </ItemGroup>
+</Project>

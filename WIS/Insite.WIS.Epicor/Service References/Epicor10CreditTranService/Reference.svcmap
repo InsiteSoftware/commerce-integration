@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7969d89d-b5b0-40eb-8702-3948fdb1b5a5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CreditTran.xsd" MetadataType="Schema" ID="1efdf1ed-cfbd-47cf-b212-9ad4e933d2d1" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd0" />
+    <MetadataFile FileName="CreditTran1.xsd" MetadataType="Schema" ID="b5ee0c76-1fc3-44e1-99d2-3b6959df3a53" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd1" />
+    <MetadataFile FileName="CreditTran2.xsd" MetadataType="Schema" ID="c8124d8b-1463-45d6-a9b7-a6aaa35b3f16" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd2" />
+    <MetadataFile FileName="CreditTran3.xsd" MetadataType="Schema" ID="0b66febc-039a-4391-9fb3-f1f5dfa64ad9" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd6" />
+    <MetadataFile FileName="CreditTran4.xsd" MetadataType="Schema" ID="3f13ebd8-98e5-4c73-a2cf-33211900aa2a" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd5" />
+    <MetadataFile FileName="CreditTranSvcFacade.wsdl" MetadataType="Wsdl" ID="e96c34e7-cd18-4f1d-b4fa-5fdd79e46734" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?wsdl" />
+    <MetadataFile FileName="CreditTran.wsdl" MetadataType="Wsdl" ID="f7f35206-8f87-42a2-a031-642881e7dc3d" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CreditTran5.xsd" MetadataType="Schema" ID="df6b9461-08c3-4c2c-ae7e-8ef8bc68fc4f" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd3" />
+    <MetadataFile FileName="CreditTran6.xsd" MetadataType="Schema" ID="51e9e8d9-6094-4152-9fee-59b425e8e8e5" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd4" />
+    <MetadataFile FileName="CreditTran.disco" MetadataType="Disco" ID="78f027f0-7c6a-4f62-bf5b-afbe68f09cc2" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

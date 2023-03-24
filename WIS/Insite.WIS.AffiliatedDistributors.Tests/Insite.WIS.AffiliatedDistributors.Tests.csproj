@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="TestData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Insite.Core.TestHelpers\Insite.Core.TestHelpers.csproj" />
+    <ProjectReference Include="..\Insite.Integration.TestHelpers\Insite.Integration.TestHelpers.csproj" />
+    <ProjectReference Include="..\Insite.WIS.AffiliatedDistributors\Insite.WIS.AffiliatedDistributors.csproj" />
+    <ProjectReference Include="..\Insite.WIS.Broker\Insite.WIS.Broker.csproj" />
+  </ItemGroup>
+</Project>

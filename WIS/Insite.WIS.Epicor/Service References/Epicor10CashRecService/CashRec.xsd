@@ -1,0 +1,2087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Erp.Tablesets" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CashRec.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+  <xs:complexType name="CashRecTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Ice" base="q1:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BankTran" nillable="true" type="tns:BankTranTable" />
+          <xs:element minOccurs="0" name="BankTranTGLC" nillable="true" type="tns:BankTranTGLCTable" />
+          <xs:element minOccurs="0" name="BankTranTaxDtl" nillable="true" type="tns:BankTranTaxDtlTable" />
+          <xs:element minOccurs="0" name="CDTaxDtl" nillable="true" type="tns:CDTaxDtlTable" />
+          <xs:element minOccurs="0" name="CashDtl" nillable="true" type="tns:CashDtlTable" />
+          <xs:element minOccurs="0" name="CashHead" nillable="true" type="tns:CashHeadTable" />
+          <xs:element minOccurs="0" name="CashHeadAttch" nillable="true" type="tns:CashHeadAttchTable" />
+          <xs:element minOccurs="0" name="CashHeadTGLC" nillable="true" type="tns:CashHeadTGLCTable" />
+          <xs:element minOccurs="0" name="DebNote" nillable="true" type="tns:DebNoteTable" />
+          <xs:element minOccurs="0" name="LegalNumGenOpts" nillable="true" type="tns:LegalNumGenOptsTable" />
+          <xs:element minOccurs="0" name="TaxDtl" nillable="true" type="tns:TaxDtlTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CashRecTableset" nillable="true" type="tns:CashRecTableset" />
+  <xs:complexType name="BankTranTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BankTranRow" nillable="true" type="tns:BankTranRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BankTranTable" nillable="true" type="tns:BankTranTable" />
+  <xs:complexType name="BankTranRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Ice" base="q2:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BankAcctID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAcctIDBankName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAcctIDDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankFeeAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankFeeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankFeeIDDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankFeeIDTaxCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankFeeTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankRecGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankSlip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BaseCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="CNCFICode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CNCFICodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CRCurrCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CRRateGrpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CRTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CRTranClearedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CashBookNum" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CashbookLine" type="xs:int" />
+          <xs:element minOccurs="0" name="CashbookLineDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeDocumentDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DisableBankAmt" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DispAmtReverse" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DispDocTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DispDocTranClearedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DispGLAcct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DispTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DispTranClearedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocBankFeeAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocBankFeeTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocBankRecGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocRevalueBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTranClearedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="EnableGetDefaultAcct" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EntryDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EntryPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntryTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FiscalCalendarID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalPeriod" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYear" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYearSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLPosted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GLRefCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLRefCodeDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLRefType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GainLossType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InternalDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsFiltered" type="xs:boolean" />
+          <xs:element minOccurs="0" name="JournalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JournalCodeJrnlDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JournalNum" type="xs:int" />
+          <xs:element minOccurs="0" name="LegalNumMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNumStyle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MXRecDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PCashDeskID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCashRefNum" type="xs:int" />
+          <xs:element minOccurs="0" name="RateGrpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefCodeStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RevalueBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RevalueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReverseGL" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Rpt1BankFeeAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1BankFeeTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1BankRecGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DispTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DispTranClearedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1RevalueBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TranClearedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2BankFeeAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2BankFeeTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2BankRecGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DispTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DispTranClearedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2RevalueBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TranClearedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3BankFeeAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3BankFeeTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3BankRecGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DispTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DispTranClearedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3RevalueBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TranClearedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SourceModule" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranClearPending" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TranCleared" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TranClearedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranClearedDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TranClearedPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranClearedTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TranDocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranNum" type="xs:int" />
+          <xs:element minOccurs="0" name="TranRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Voided" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BankTranRow" nillable="true" type="tns:BankTranRow" />
+  <xs:complexType name="BankTranTGLCTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BankTranTGLCRow" nillable="true" type="tns:BankTranTGLCRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BankTranTGLCTable" nillable="true" type="tns:BankTranTGLCTable" />
+  <xs:complexType name="BankTranTGLCRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Ice" base="q3:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ABTUID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="APInvoiceNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ARInvoiceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="BankAcctID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="BookCreditAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BookDebitAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BookID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COACode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COADescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CorrAccUID" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreditAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CreditStatAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DebitAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DebitStatAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ExtCompanyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalCalendarID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalYear" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYearSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLAccountAccountDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLAccountGLAcctDisp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLAccountGLShortAcct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLAcctContext" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLBookCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLBookDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InternalDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvoiceLine" type="xs:int" />
+          <xs:element minOccurs="0" name="IsExternalCompany" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsModifiedByUser" type="xs:boolean" />
+          <xs:element minOccurs="0" name="JournalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JournalLine" type="xs:int" />
+          <xs:element minOccurs="0" name="JournalNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Key1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LaborDtlSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="LaborHedSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="PCashDeskID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCashRefNum" type="xs:int" />
+          <xs:element minOccurs="0" name="RecordType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelatedToFile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RuleUID" type="xs:int" />
+          <xs:element minOccurs="0" name="SegValue1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue17" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue18" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue19" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue20" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SeqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="StatUOMCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Statistical" type="xs:int" />
+          <xs:element minOccurs="0" name="SysDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SysGLControlCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysGLControlType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="SysTime" type="xs:int" />
+          <xs:element minOccurs="0" name="TGLCTranNum" type="xs:int" />
+          <xs:element minOccurs="0" name="TranDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TranNum" type="xs:int" />
+          <xs:element minOccurs="0" name="TranSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UserCanModify" type="xs:boolean" />
+          <xs:element minOccurs="0" name="VendorNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Voided" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BankTranTGLCRow" nillable="true" type="tns:BankTranTGLCRow" />
+  <xs:complexType name="BankTranTaxDtlTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BankTranTaxDtlRow" nillable="true" type="tns:BankTranTaxDtlRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BankTranTaxDtlTable" nillable="true" type="tns:BankTranTaxDtlTable" />
+  <xs:complexType name="BankTranTaxDtlRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Ice" base="q4:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="APTranNo" type="xs:int" />
+          <xs:element minOccurs="0" name="BankAcctID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="CNCFICode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CNCFICodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CTDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CollectionType" type="xs:int" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DisableManual" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocFixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ECAcquisitionSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="ExemptPercent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ExemptType" type="xs:int" />
+          <xs:element minOccurs="0" name="FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InternalDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvoiceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceRef" type="xs:int" />
+          <xs:element minOccurs="0" name="IsFiltered" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ManAdd" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Manual" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PCashDeskID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCashRefNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Percent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RateCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResolutionDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ResolutionNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReverseCharge" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Rpt1DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SourceModule" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TextCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Timing" type="xs:int" />
+          <xs:element minOccurs="0" name="TranNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Voided" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BankTranTaxDtlRow" nillable="true" type="tns:BankTranTaxDtlRow" />
+  <xs:complexType name="CDTaxDtlTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CDTaxDtlRow" nillable="true" type="tns:CDTaxDtlRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CDTaxDtlTable" nillable="true" type="tns:CDTaxDtlTable" />
+  <xs:complexType name="CDTaxDtlRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Ice" base="q5:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="APTranNo" type="xs:int" />
+          <xs:element minOccurs="0" name="BankAcctID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="CTDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CollectionType" type="xs:int" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DisableManual" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocFixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ECAcquisitionSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="ExemptPercent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ExemptType" type="xs:int" />
+          <xs:element minOccurs="0" name="FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ManAdd" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Manual" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PCashDeskID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCashRefNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Percent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RateCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResolutionDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ResolutionNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReverseCharge" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Rpt1DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SourceModule" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TextCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Timing" type="xs:int" />
+          <xs:element minOccurs="0" name="TranNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Voided" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CDTaxDtlRow" nillable="true" type="tns:CDTaxDtlRow" />
+  <xs:complexType name="CashDtlTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashDtlRow" nillable="true" type="tns:CashDtlRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashDtlTable" nillable="true" type="tns:CashDtlTable" />
+  <xs:complexType name="CashDtlRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Ice" base="q6:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllowChgAfterPrint" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ApplyDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AssetTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BaseAdjAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BaseCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BaseCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BillConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="BranchID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cash" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CorrectionInv" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditCard" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditMemo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustNumBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DNAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DNComments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DNCustNbr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DebitNote" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DebitNotesApplied" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Deferred" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DispGLAcct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DispTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDispTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDnAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocNetCash" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocNewBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocRevalueBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocSelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocWithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="EnableAssignLegNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableTranDocType" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableVoidLegNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Excluded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FiscalCalendarID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalPeriod" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYear" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYearSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullyPaid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GLPosted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GLRefCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLRefCodeDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLRefType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GainLossAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GainLossType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GetDfltTaxIds" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HasLegNumCnfg" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="IncomeTaxCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IncomeTaxDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvDiscountDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvDueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvExchRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvLegalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvLockRate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InvTermsCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvXRateLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvoiceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceNumCardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceNumTermsCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceRef" type="xs:int" />
+          <xs:element minOccurs="0" name="IsCreditPayment" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDiscountforCreditM" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LegalNumMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNumStyle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MainSite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NetCash" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NewBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NonDeductDocAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductRpt1Amt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductRpt2Amt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductRpt3Amt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Normal" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OldGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PCashDeskID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCashRefNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PNRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PmtDueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PostToGL" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Posted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RateGrpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateGrpDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RedStorno" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RedStornoOpt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefCodeStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RetInvoiceNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RevalueBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RevalueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReverseGL" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RoundDiff" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DispTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DnAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1GainLossAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1NetCash" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1NewBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1OldGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1RevalueBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DispTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DnAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2GainLossAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2NetCash" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2NewBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2OldGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2RevalueBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DispTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DnAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3GainLossAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3NetCash" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3NewBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3OldGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3RevalueBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SEPADDMsgID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SEPADDPmtID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SiteCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="SoldToCustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="SystemTranType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxReceiptDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxReceiptNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRegionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRgnDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxableAdjustment" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TranDocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranTypeDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WHTCertificateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="WHTCertificateNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="XRateLabel" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CashDtlRow" nillable="true" type="tns:CashDtlRow" />
+  <xs:complexType name="CashHeadTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashHeadRow" nillable="true" type="tns:CashHeadRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashHeadTable" nillable="true" type="tns:CashHeadTable" />
+  <xs:complexType name="CashHeadRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Ice" base="q7:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AVSAddr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AVSZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountCardNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllocDepBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AllocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AllowChgAfterPrint" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AllowUpdSettlementCurr" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AmtToAlloc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ApplyDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ApplyHeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="AssetTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAcctID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAcctIDBankName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAcctIDDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankBaseXRateLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankRcptExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankRcptExchangeRate10D" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankRcptXRateLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankTranID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankTransDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="BaseCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BaseCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BillToName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="BranchID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCAllowSales" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCApprovalNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCCSCID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCCSCIDToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCDocAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCDocFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCDocTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCDocTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCEnableAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CCEnableCSC" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCResponse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCStreetAddr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCTranID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCTranType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CMCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMCurrencyCodeCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMCurrencyCodeCurrName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMCurrencyCodeCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMCurrencyCodeCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMCurrencyCodeDocumentDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CSCResult" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardStore" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardTypeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardmemberReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cash" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CashBookNum" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CashbookLine" type="xs:int" />
+          <xs:element minOccurs="0" name="CashbookLineDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CorrectionInv" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditCard" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditHold" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditMemo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditMemoNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CurrAmtSelected" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeDocumentDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustFullAddr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustNumBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DebNoteOnly" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Deferred" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DisableFieldsForPCashDoc" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DiscountDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DispGLAcct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocAllocDepBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocAllocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocAmtToAlloc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepApplied" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocReceipt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocSelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTranTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocUnAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocWithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocumentNum" type="xs:int" />
+          <xs:element minOccurs="0" name="DocumentType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnableAssignLegNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableGetDefaultAcct" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableTranDocType" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableTransactionDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableVoidLegNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Excluded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExpirationMonth" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpirationYear" type="xs:int" />
+          <xs:element minOccurs="0" name="ExternalID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalCalendarID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalPeriod" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYear" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYearSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullyPaid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GLPosted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GLRefCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLRefCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLRefType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GetDfltTaxIds" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HasLegNumCnfg" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="IncomeTaxCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IncomeTaxDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvcLegalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvoiceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceNumCardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceNumTermsCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsLcked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LegalNumMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNumberDsp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LockRate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MainSite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MandateReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NonDeductAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NonDeductDocAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductRpt1Amt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductRpt2Amt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductRpt3Amt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Normal" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnAccount" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNumCardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNumCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherDetails" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCashDeskID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCashDocDirection" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCashRefNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PMUID" type="xs:int" />
+          <xs:element minOccurs="0" name="Payee" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayeeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Plant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Posted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProcessCard" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateGrpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateGrpDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcptCurrencyCodeCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcptCurrencyCodeCurrName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcptCurrencyCodeCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcptCurrencyCodeCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcptCurrencyCodeDocumentDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReadyToCalc" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RecalcBeforePost" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ReceiptAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ReceiptCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferencePNRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RetInvoiceNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReverseDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReverseRef" type="xs:int" />
+          <xs:element minOccurs="0" name="Rpt1AllocDepBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1AllocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1AppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TranTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1UnAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1UnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2AllocDepBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2AllocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2AppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TranTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2UnAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2UnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3AllocDepBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3AllocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3AppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TranTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3UnAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3UnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RvnJrnUID" type="xs:int" />
+          <xs:element minOccurs="0" name="SEPADDExportDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SalesOrderValue" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SettlementExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SettlementExchangeRate10D" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SettlementXRateLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SiteCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToCustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="SystemTranType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxRegionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRegionCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxWhld" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxWhldCalc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalRoundDiff" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TranDocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranTypeDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UnappliedAmountApplied" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="XRateLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="calcRate" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CashHeadRow" nillable="true" type="tns:CashHeadRow" />
+  <xs:complexType name="CashHeadAttchTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashHeadAttchRow" nillable="true" type="tns:CashHeadAttchRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashHeadAttchTable" nillable="true" type="tns:CashHeadAttchTable" />
+  <xs:complexType name="CashHeadAttchRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Ice" base="q8:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawingSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PDMDocID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="XFileRefNum" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CashHeadAttchRow" nillable="true" type="tns:CashHeadAttchRow" />
+  <xs:complexType name="CashHeadTGLCTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashHeadTGLCRow" nillable="true" type="tns:CashHeadTGLCRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashHeadTGLCTable" nillable="true" type="tns:CashHeadTGLCTable" />
+  <xs:complexType name="CashHeadTGLCRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Ice" base="q9:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ABTUID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="APInvoiceNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ARInvoiceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="BookCreditAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BookDebitAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BookID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COACode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COADescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CorrAccUID" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreditAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CreditStatAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DebitAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DebitStatAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ExtCompanyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalCalendarID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalYear" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYearSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLAccountAccountDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLAccountGLAcctDisp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLAccountGLShortAcct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLAcctContext" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLBookCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLBookDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceLine" type="xs:int" />
+          <xs:element minOccurs="0" name="IsExternalCompany" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsModifiedByUser" type="xs:boolean" />
+          <xs:element minOccurs="0" name="JournalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JournalLine" type="xs:int" />
+          <xs:element minOccurs="0" name="JournalNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Key1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LaborDtlSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="LaborHedSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="RecordType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelatedToFile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RuleUID" type="xs:int" />
+          <xs:element minOccurs="0" name="SegValue1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue17" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue18" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue19" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue20" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SegValue9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SeqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="StatUOMCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Statistical" type="xs:int" />
+          <xs:element minOccurs="0" name="SysDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SysGLControlCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysGLControlType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="SysTime" type="xs:int" />
+          <xs:element minOccurs="0" name="TGLCTranNum" type="xs:int" />
+          <xs:element minOccurs="0" name="TranDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TranNum" type="xs:int" />
+          <xs:element minOccurs="0" name="TranSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UserCanModify" type="xs:boolean" />
+          <xs:element minOccurs="0" name="VendorNum" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CashHeadTGLCRow" nillable="true" type="tns:CashHeadTGLCRow" />
+  <xs:complexType name="DebNoteTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DebNoteRow" nillable="true" type="tns:DebNoteRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DebNoteTable" nillable="true" type="tns:DebNoteTable" />
+  <xs:complexType name="DebNoteRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Ice" base="q10:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="CashHeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="DNAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DNApplied" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DNAppliedTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DNComments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DNCustNbr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DNDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DNDueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DNInvBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DNInvDueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DNInvLegalNbr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DNInvNbr" type="xs:int" />
+          <xs:element minOccurs="0" name="DNInvoiceClsd" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DebitNoteID" type="xs:int" />
+          <xs:element minOccurs="0" name="DocDNAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvNbrAssigned" type="xs:int" />
+          <xs:element minOccurs="0" name="InvcChanged" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PmtPosted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Rpt1DNAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DNAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DNAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DebNoteRow" nillable="true" type="tns:DebNoteRow" />
+  <xs:complexType name="LegalNumGenOptsTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LegalNumGenOptsRow" nillable="true" type="tns:LegalNumGenOptsRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LegalNumGenOptsTable" nillable="true" type="tns:LegalNumGenOptsTable" />
+  <xs:complexType name="LegalNumGenOptsRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Ice" base="q11:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DspTransYear" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnablePrefix" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableSuffix" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GenerationType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNumberID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumberOption" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumberSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PeriodPrefix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Prefix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrefixList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShowDspTransYear" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShowTransPeriod" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TranDocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransPeriod" type="xs:int" />
+          <xs:element minOccurs="0" name="TransYear" type="xs:int" />
+          <xs:element minOccurs="0" name="TransYearSuffix" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LegalNumGenOptsRow" nillable="true" type="tns:LegalNumGenOptsRow" />
+  <xs:complexType name="TaxDtlTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaxDtlRow" nillable="true" type="tns:TaxDtlRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaxDtlTable" nillable="true" type="tns:TaxDtlTable" />
+  <xs:complexType name="TaxDtlRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Ice" base="q12:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="APTranNo" type="xs:int" />
+          <xs:element minOccurs="0" name="BankAcctID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="CNCFICode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CNCFICodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CTDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CollectionType" type="xs:int" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DisableManual" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocFixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ECAcquisitionSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="ExemptPercent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ExemptType" type="xs:int" />
+          <xs:element minOccurs="0" name="FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ManAdd" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Manual" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PCashDeskID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCashRefNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Percent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RateCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResolutionDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ResolutionNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReverseCharge" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Rpt1DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DedTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DefTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DefTaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DiscTaxAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DiscTaxAdjVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DiscTaxableAdj" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3FixedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SourceModule" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxAmtVar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxableAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TextCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Timing" type="xs:int" />
+          <xs:element minOccurs="0" name="TranNum" type="xs:int" />
+          <xs:element minOccurs="0" name="Voided" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TaxDtlRow" nillable="true" type="tns:TaxDtlRow" />
+  <xs:complexType name="CashHeadListTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Ice" base="q13:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CashHeadList" nillable="true" type="tns:CashHeadListTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CashHeadListTableset" nillable="true" type="tns:CashHeadListTableset" />
+  <xs:complexType name="CashHeadListTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashHeadListRow" nillable="true" type="tns:CashHeadListRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashHeadListTable" nillable="true" type="tns:CashHeadListTable" />
+  <xs:complexType name="CashHeadListRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Ice" base="q14:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AVSAddr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AVSZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountCardNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AllowUpdSettlementCurr" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ApplyDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ApplyHeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="AssetTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAcctID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAcctIDBankName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAcctIDDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankBaseXRateLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankRcptExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankRcptExchangeRate10D" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankRcptXRateLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankTranID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankTransDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="BaseCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BaseCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BillToName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCAllowSales" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCApprovalNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCCSCID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCDocAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCDocFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCDocTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCDocTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCEnableAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CCEnableCSC" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCResponse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCStreetAddr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CCTranID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCTranType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CMCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMCurrencyCodeCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMCurrencyCodeCurrName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMCurrencyCodeCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMCurrencyCodeCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMCurrencyCodeDocumentDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CSCResult" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardStore" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardTypeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardmemberReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cash" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CashBookNum" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CashbookLine" type="xs:int" />
+          <xs:element minOccurs="0" name="CashbookLineDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreditCard" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditHold" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditMemoNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeDocumentDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustFullAddr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustNumBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DebNoteOnly" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Deferred" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DiscountDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DispGLAcct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocAllocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepApplied" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocReceipt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocSelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTranTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocUnAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocWithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocumentNum" type="xs:int" />
+          <xs:element minOccurs="0" name="DocumentType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnableTransactionDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Excluded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExpirationMonth" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpirationYear" type="xs:int" />
+          <xs:element minOccurs="0" name="ExternalID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalCalendarID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalPeriod" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYear" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYearSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullyPaid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GLPosted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GLRefCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLRefType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GetDfltTaxIds" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="IncomeTaxCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IncomeTaxDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvcLegalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvoiceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceNumCardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceNumTermsCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsLcked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LegalNumMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNumberDsp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LockRate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MainSite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NonDeductAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NonDeductDocAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductRpt1Amt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductRpt2Amt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NonDeductRpt3Amt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Normal" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OnAccount" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderNumCardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNumCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCashDeskID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCashRefNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PMUID" type="xs:int" />
+          <xs:element minOccurs="0" name="PayeeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Plant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Posted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProcessCard" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateGrpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateGrpDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcptCurrencyCodeCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcptCurrencyCodeCurrName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcptCurrencyCodeCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcptCurrencyCodeCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcptCurrencyCodeDocumentDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReadyToCalc" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RecalcBeforePost" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ReceiptAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ReceiptCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferencePNRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReverseDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReverseRef" type="xs:int" />
+          <xs:element minOccurs="0" name="Rpt1AllocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1AppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1TranTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1UnAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1UnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2AllocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2AppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2TranTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2UnAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2UnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3AllocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3AppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCFreight" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3CCTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3TranTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3UnAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3UnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RvnJrnUID" type="xs:int" />
+          <xs:element minOccurs="0" name="SalesOrderValue" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SelfAssessAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SettlementExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SettlementExchangeRate10D" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SettlementXRateLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SiteCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToCustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="TaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxRegionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRegionCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxWhld" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxWhldCalc" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalRoundDiff" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TranDocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranTaxAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranTypeDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnAppliedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UnappliedAmountApplied" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="XRateLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="calcRate" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CashHeadListRow" nillable="true" type="tns:CashHeadListRow" />
+  <xs:complexType name="UpdExtCashRecTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Ice" base="q15:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BankTran" nillable="true" type="tns:BankTranTable" />
+          <xs:element minOccurs="0" name="BankTranTGLC" nillable="true" type="tns:BankTranTGLCTable" />
+          <xs:element minOccurs="0" name="BankTranTaxDtl" nillable="true" type="tns:BankTranTaxDtlTable" />
+          <xs:element minOccurs="0" name="CDTaxDtl" nillable="true" type="tns:CDTaxDtlTable" />
+          <xs:element minOccurs="0" name="CashDtl" nillable="true" type="tns:CashDtlTable" />
+          <xs:element minOccurs="0" name="CashHead" nillable="true" type="tns:CashHeadTable" />
+          <xs:element minOccurs="0" name="CashHeadAttch" nillable="true" type="tns:CashHeadAttchTable" />
+          <xs:element minOccurs="0" name="CashHeadTGLC" nillable="true" type="tns:CashHeadTGLCTable" />
+          <xs:element minOccurs="0" name="DebNote" nillable="true" type="tns:DebNoteTable" />
+          <xs:element minOccurs="0" name="LegalNumGenOpts" nillable="true" type="tns:LegalNumGenOptsTable" />
+          <xs:element minOccurs="0" name="TaxDtl" nillable="true" type="tns:TaxDtlTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdExtCashRecTableset" nillable="true" type="tns:UpdExtCashRecTableset" />
+  <xs:complexType name="ARInvcAllocTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Ice" base="q16:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ARInvcAlloc" nillable="true" type="tns:ARInvcAllocTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ARInvcAllocTableset" nillable="true" type="tns:ARInvcAllocTableset" />
+  <xs:complexType name="ARInvcAllocTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ARInvcAllocRow" nillable="true" type="tns:ARInvcAllocRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ARInvcAllocTable" nillable="true" type="tns:ARInvcAllocTable" />
+  <xs:complexType name="ARInvcAllocRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/Ice" base="q17:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ARLOCID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ARPromNoteID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AdjustAmtTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AllocAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AllowOverpaidInv" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ApplyDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoPrintReady" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BillConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="BillToInvoiceAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BillingDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="BillingNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="BlockedFinChrg" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BlockedFinChrgReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BlockedRemLetters" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BlockedRemLettersReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCStreetAddr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CHISRCodeLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardmemberReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CashApplied" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClosedDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Consolidated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ContractDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContractRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CopyLatestInvoice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CorrectionInv" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditMemo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CurrDecGeneral" type="xs:int" />
+          <xs:element minOccurs="0" name="CurrRateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustAgentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustAgentTaxRegNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustomerBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CycleCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CycleInactive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DNComments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DNCustNbr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DNPmtAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DebitNote" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Deferred" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DeferredRevenue" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DepBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DepGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DepUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DepositAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DepositCredit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscountApplicable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DiscountPercent" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DispBalDN" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DisplayCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocDNPmtAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepApplied" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepositAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepositCredit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDispBalDN" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocMaxValueAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocPayAmounts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocPayDiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocRecurBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocRounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocTotalDN" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocUnpostedBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocWithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocumentPrinted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DspDepBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DspDocDepBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DspDocInvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DspDocInvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DspInvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DspInvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Duration" type="xs:int" />
+          <xs:element minOccurs="0" name="EDIReady" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ERSInvoice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EntryPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Excluded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExpirationMonth" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpirationYear" type="xs:int" />
+          <xs:element minOccurs="0" name="ExportReportNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExportType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalCalendarID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalPeriod" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYear" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYearSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLPosted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GUIDateOfExport" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GUIDeductCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUIExportBillNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUIExportBillType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUIExportMark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUIExportType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUIFormatCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUITaxTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="HoldInvoice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InPrice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InstanceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvcNegBal" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InvcSelected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvoiceHeld" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InvoiceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceNumList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceRef" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsAddedToGTI" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDiscountforCreditM" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsRecurring" type="xs:boolean" />
+          <xs:element minOccurs="0" name="JournalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JournalNum" type="xs:int" />
+          <xs:element minOccurs="0" name="LastChrgCalcDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LegalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LockRate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockTaxRate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MainSite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MaxValueAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NextDiscDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OpenInvoice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrigDueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OurBank" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OverrideEndDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OvrDefTaxDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PBProjectID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PIPayment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PMUID" type="xs:int" />
+          <xs:element minOccurs="0" name="PONum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PackSlipNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PayAmounts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayDates" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayDiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PayDiscDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PayDiscDays" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayDiscPartPay" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PayDiscPer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Plant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Posted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProcessCard" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RMANum" type="xs:int" />
+          <xs:element minOccurs="0" name="RateGrpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReadyToBill" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ReadyToCalc" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RealEstateNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecalcBeforePost" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RecurBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RecurSource" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RecurringState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefCancelled" type="xs:int" />
+          <xs:element minOccurs="0" name="RefCancelledBy" type="xs:int" />
+          <xs:element minOccurs="0" name="RepComm1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepComm2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepComm3" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepComm4" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepComm5" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate3" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate4" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate5" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSales1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSales2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSales3" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSales4" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSales5" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSplit1" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit2" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit3" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit4" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit5" type="xs:int" />
+          <xs:element minOccurs="0" name="RetInvoiceNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReversalDocAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DepGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DepUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DepositAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DepositCredit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1MaxValueAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1PayAmounts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rpt1PayDiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1RecurBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1UnpostedBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DepGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DepUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DepositAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DepositCredit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2MaxValueAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2PayAmounts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rpt2PayDiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2RecurBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2UnpostedBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DepGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DepUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DepositAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DepositCredit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3MaxValueAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3PayAmounts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rpt3PayDiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3RecurBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3UnpostedBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SEBankRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SiteCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="SoldToCustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToInvoiceAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StartUp" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SummarizationDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="THIsImmatAdjustment" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TaxPoint" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxRateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxRateGrpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRegionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TermsCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotFinChrg" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranDocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnappliedCash" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UnpostedBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UseAltBillTo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="XRefContractDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="XRefContractNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XRefInvoiceNum" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ARInvcAllocRow" nillable="true" type="tns:ARInvcAllocRow" />
+  <xs:complexType name="ARInvSelTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Ice" base="q18:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ARInvSel" nillable="true" type="tns:ARInvSelTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ARInvSelTableset" nillable="true" type="tns:ARInvSelTableset" />
+  <xs:complexType name="ARInvSelTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ARInvSelRow" nillable="true" type="tns:ARInvSelRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ARInvSelTable" nillable="true" type="tns:ARInvSelTable" />
+  <xs:complexType name="ARInvSelRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Ice" base="q19:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ARLOCID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllocAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ApplyAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ApplyDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoPrintReady" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BankNetPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BillConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="BillToInvoiceAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BillingDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="BillingNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="BlockedFinChrg" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BlockedFinChrgReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BlockedRemLetters" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BlockedRemLettersReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCStreetAddr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CHISRCodeLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CMType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardMemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardmemberReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CashGroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClosedDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Consolidated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ContractDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContractRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CopyLatestInvoice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CorrectionInv" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreditMemo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CurrRateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustAgentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustAgentTaxRegNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CustomerBTName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerCustID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CycleCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CycleInactive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DNComments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DNCustNbr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DebitNote" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Deferred" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DeferredRevenue" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DepGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DepUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DepositAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DepositCredit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Discount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DiscountAvailable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DocDepApplied" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepositAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDepositCredit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocDiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocGrossPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocInvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocMaxValueAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocNetPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocPayAmounts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocPayDiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocRecurBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocRounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocUnpostedBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocWithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocumentPrinted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DueDateHighLighted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Duration" type="xs:int" />
+          <xs:element minOccurs="0" name="EDIReady" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EntryPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Excluded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExpirationMonth" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpirationYear" type="xs:int" />
+          <xs:element minOccurs="0" name="ExportReportNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExportType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalCalendarID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FiscalPeriod" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYear" type="xs:int" />
+          <xs:element minOccurs="0" name="FiscalYearSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GLPosted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GUIDateOfExport" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GUIDeductCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUIExportBillNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUIExportBillType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUIExportMark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUIExportType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUIFormatCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GUITaxTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GrossPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HeadNum" type="xs:int" />
+          <xs:element minOccurs="0" name="HoldInvoice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InPrice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InstanceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InvoiceHeld" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InvoiceNum" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceNumList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceRef" type="xs:int" />
+          <xs:element minOccurs="0" name="InvoiceSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsAddedToGTI" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsRecurring" type="xs:boolean" />
+          <xs:element minOccurs="0" name="JournalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JournalNum" type="xs:int" />
+          <xs:element minOccurs="0" name="LastChrgCalcDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LegalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LockRate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockTaxRate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MainSite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MaxValueAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OpenInvoice" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderNum" type="xs:int" />
+          <xs:element minOccurs="0" name="OrigDueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OurBank" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OverrideEndDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OvrDefTaxDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PBProjectID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PIPayment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PMUID" type="xs:int" />
+          <xs:element minOccurs="0" name="PONum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayAmounts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayDates" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayDiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PayDiscDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PayDiscDays" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayDiscPartPay" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PayDiscPer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Plant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Posted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProcessCard" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RMANum" type="xs:int" />
+          <xs:element minOccurs="0" name="RateGrpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReadyToBill" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ReadyToCalc" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RealEstateNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecalcBeforePost" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RecurBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RecurSource" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RecurringState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefCancelled" type="xs:int" />
+          <xs:element minOccurs="0" name="RefCancelledBy" type="xs:int" />
+          <xs:element minOccurs="0" name="RepComm1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepComm2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepComm3" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepComm4" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepComm5" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate3" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate4" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepRate5" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSales1" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSales2" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSales3" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSales4" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSales5" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RepSplit1" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit2" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit3" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit4" type="xs:int" />
+          <xs:element minOccurs="0" name="RepSplit5" type="xs:int" />
+          <xs:element minOccurs="0" name="ReversalDocAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DepGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DepUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DepositAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DepositCredit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1DiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1GrossPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1MaxValueAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1PayAmounts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rpt1PayDiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1RecurBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1UnpostedBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DepGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DepUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DepositAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DepositCredit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2DiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2GrossPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2MaxValueAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2PayAmounts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rpt2PayDiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2RecurBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2UnpostedBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DepGainLoss" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DepUnallocatedAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DepositAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DepositCredit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3DiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3GrossPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InvoiceAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3InvoiceBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3MaxValueAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3PayAmounts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rpt3PayDiscAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3RecurBalance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3Rounding" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3UnpostedBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SEBankRef" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesRepList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ShipDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SiteCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoldToCustNum" type="xs:int" />
+          <xs:element minOccurs="0" name="SoldToInvoiceAddress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StartUp" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SummarizationDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="THIsImmatAdjustment" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TaxPoint" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxRateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxRateGrpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRegionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TermsCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotFinChrg" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TranDocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnappliedCash" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UnpostedBal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UseAltBillTo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WithholdAmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="XRefContractDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="XRefContractNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XRefInvoiceNum" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ARInvSelRow" nillable="true" type="tns:ARInvSelRow" />
+</xs:schema>

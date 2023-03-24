@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Insite.Core.TestHelpers\Insite.Core.TestHelpers.csproj" />
+    <ProjectReference Include="..\..\..\Core\Integration\Insite.Integration\Insite.Integration.csproj" />
+    <ProjectReference Include="..\..\..\Data\Insite.Data.Entities\Insite.Data.Entities.csproj" />
+    <ProjectReference Include="..\..\Insite.Plugins\Insite.Plugins.csproj" />
+    <ProjectReference Include="..\Insite.Integration.Connector.Ifs\Insite.Integration.Connector.Ifs.csproj" />
+  </ItemGroup>
+</Project>

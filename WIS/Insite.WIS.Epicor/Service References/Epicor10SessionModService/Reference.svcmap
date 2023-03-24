@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b3022d40-5646-4dac-8a2a-8cc4e42f4b0f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vst-epicor10/ERP100500/ICE/Lib/SessionMod.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SessionMod.xsd" MetadataType="Schema" ID="58e2be57-6777-4a58-90af-01f5b8983131" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Ice/Lib/SessionMod.svc?xsd=xsd6" />
+    <MetadataFile FileName="SessionMod1.xsd" MetadataType="Schema" ID="455d4bc4-cd22-44fd-b68c-add598d55e70" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Ice/Lib/SessionMod.svc?xsd=xsd7" />
+    <MetadataFile FileName="SessionMod2.xsd" MetadataType="Schema" ID="65efb191-9daf-4d36-8b31-073b1a902e95" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Ice/Lib/SessionMod.svc?xsd=xsd4" />
+    <MetadataFile FileName="SessionMod.disco" MetadataType="Disco" ID="4bad9682-94a8-4c7a-996a-f86e463d67de" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Ice/Lib/SessionMod.svc?disco" />
+    <MetadataFile FileName="SessionMod3.xsd" MetadataType="Schema" ID="feb3de63-ed30-48dc-85a1-efe78d672a84" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Ice/Lib/SessionMod.svc?xsd=xsd2" />
+    <MetadataFile FileName="SessionMod4.xsd" MetadataType="Schema" ID="679f7381-8aab-4aa1-87ed-121b9123ba23" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Ice/Lib/SessionMod.svc?xsd=xsd3" />
+    <MetadataFile FileName="SessionMod5.xsd" MetadataType="Schema" ID="984f29f3-d62e-4626-8790-b58b95b0cfce" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Ice/Lib/SessionMod.svc?xsd=xsd0" />
+    <MetadataFile FileName="SessionMod6.xsd" MetadataType="Schema" ID="67e8400f-d780-4180-8319-d72d93f1c586" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Ice/Lib/SessionMod.svc?xsd=xsd1" />
+    <MetadataFile FileName="SessionMod7.xsd" MetadataType="Schema" ID="548bc6ef-1abb-449c-8d14-063fee1c51e2" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Ice/Lib/SessionMod.svc?xsd=xsd5" />
+    <MetadataFile FileName="SessionMod.wsdl" MetadataType="Wsdl" ID="026e2102-53c0-4643-9bf3-65429d0f3f5c" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Ice/Lib/SessionMod.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SessionModSvcFacade.wsdl" MetadataType="Wsdl" ID="4c8615b3-77d5-498b-bcd8-d1324bf8cf59" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Ice/Lib/SessionMod.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

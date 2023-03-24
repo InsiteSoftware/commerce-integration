@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Insite.Core.TestHelpers\Insite.Core.TestHelpers.csproj" />
+    <ProjectReference Include="..\..\..\Data\Insite.Data.Entities\Insite.Data.Entities.csproj" />
+    <ProjectReference Include="..\Insite.Integration.Connector.Facts\Insite.Integration.Connector.Facts.csproj" />
+  </ItemGroup>
+</Project>

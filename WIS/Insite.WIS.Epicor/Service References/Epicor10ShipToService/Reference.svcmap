@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fd366233-6a88-4bf5-a2ab-8caf830ac1e7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vst-epicor10/ERP100500/Erp/BO/ShipTo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ShipTo.xsd" MetadataType="Schema" ID="1a4f87ac-0247-4b4c-b187-d878421a9ef4" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/ShipTo.svc?xsd=xsd0" />
+    <MetadataFile FileName="ShipTo1.xsd" MetadataType="Schema" ID="ba4186cd-109a-4a3b-9c8f-51134ceaad9f" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/ShipTo.svc?xsd=xsd2" />
+    <MetadataFile FileName="ShipTo2.xsd" MetadataType="Schema" ID="92fa1e45-f199-4606-9eb6-d16996237ad8" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/ShipTo.svc?xsd=xsd5" />
+    <MetadataFile FileName="ShipToSvcFacade.wsdl" MetadataType="Wsdl" ID="87852a17-351e-4df8-9db3-3dd6e1ec791f" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/ShipTo.svc?wsdl" />
+    <MetadataFile FileName="ShipTo3.xsd" MetadataType="Schema" ID="407c2d85-31f2-4098-9866-106fd7fe79e2" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/ShipTo.svc?xsd=xsd1" />
+    <MetadataFile FileName="ShipTo4.xsd" MetadataType="Schema" ID="5e5715e8-4a01-4f11-acd2-a5318b12f475" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/ShipTo.svc?xsd=xsd4" />
+    <MetadataFile FileName="ShipTo.disco" MetadataType="Disco" ID="4900cc2d-215f-4458-97da-3ec1733b428d" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/ShipTo.svc?disco" />
+    <MetadataFile FileName="ShipTo5.xsd" MetadataType="Schema" ID="ff126324-ed37-40b8-86b8-e91fc4330932" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/ShipTo.svc?xsd=xsd3" />
+    <MetadataFile FileName="ShipTo6.xsd" MetadataType="Schema" ID="c17c9c6a-c10d-472c-b0bd-110c8ae0f026" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/ShipTo.svc?xsd=xsd6" />
+    <MetadataFile FileName="ShipTo.wsdl" MetadataType="Wsdl" ID="3bf5ffb0-ca83-42b4-aa9a-73544a2ebf0f" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/ShipTo.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

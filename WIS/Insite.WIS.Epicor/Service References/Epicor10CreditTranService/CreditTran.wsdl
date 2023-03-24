@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Erp:BO:CreditTran" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Erp:BO:CreditTran" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Erp:BO:CreditTran/Imports">
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd0" namespace="Erp:BO:CreditTran" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Ice.Common" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Epicor.Data" />
+      <xsd:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CreditTran.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreditTranSvcContract_GetNewCreditTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCreditTran" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetNewCreditTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewCreditTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetNewCreditTran_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q1:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_DeleteByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteByID" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_DeleteByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_DeleteByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q2:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByID" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q3:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetList" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetList_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q4:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRows" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetRows_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q5:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetBySysRowID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowID" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetBySysRowID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetBySysRowID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q6:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetBySysRowIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDs" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetBySysRowIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetBySysRowIDs_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q7:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_Update_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q8:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_UpdateExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExt" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_UpdateExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_UpdateExt_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q9:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetRowsContactTracker_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsContactTracker" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetRowsContactTracker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsContactTrackerResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetRowsContactTracker_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q10:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetRowsForCreditCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsForCreditCard" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetRowsForCreditCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsForCreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditTranSvcContract_GetRowsForCreditCard_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q11:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:portType name="CreditTranSvcContract">
+    <wsdl:operation name="GetNewCreditTran">
+      <wsdl:input wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetNewCreditTran" message="tns:CreditTranSvcContract_GetNewCreditTran_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetNewCreditTranResponse" message="tns:CreditTranSvcContract_GetNewCreditTran_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetNewCreditTranEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CreditTranSvcContract_GetNewCreditTran_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByID">
+      <wsdl:input wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/DeleteByID" message="tns:CreditTranSvcContract_DeleteByID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/DeleteByIDResponse" message="tns:CreditTranSvcContract_DeleteByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/DeleteByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CreditTranSvcContract_DeleteByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <wsdl:input wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetByID" message="tns:CreditTranSvcContract_GetByID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetByIDResponse" message="tns:CreditTranSvcContract_GetByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CreditTranSvcContract_GetByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <wsdl:input wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetList" message="tns:CreditTranSvcContract_GetList_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetListResponse" message="tns:CreditTranSvcContract_GetList_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetListEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CreditTranSvcContract_GetList_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <wsdl:input wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetRows" message="tns:CreditTranSvcContract_GetRows_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetRowsResponse" message="tns:CreditTranSvcContract_GetRows_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetRowsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CreditTranSvcContract_GetRows_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowID">
+      <wsdl:input wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetBySysRowID" message="tns:CreditTranSvcContract_GetBySysRowID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetBySysRowIDResponse" message="tns:CreditTranSvcContract_GetBySysRowID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetBySysRowIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CreditTranSvcContract_GetBySysRowID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowIDs">
+      <wsdl:input wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetBySysRowIDs" message="tns:CreditTranSvcContract_GetBySysRowIDs_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetBySysRowIDsResponse" message="tns:CreditTranSvcContract_GetBySysRowIDs_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetBySysRowIDsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CreditTranSvcContract_GetBySysRowIDs_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/Update" message="tns:CreditTranSvcContract_Update_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/UpdateResponse" message="tns:CreditTranSvcContract_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/UpdateEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CreditTranSvcContract_Update_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExt">
+      <wsdl:input wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/UpdateExt" message="tns:CreditTranSvcContract_UpdateExt_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/UpdateExtResponse" message="tns:CreditTranSvcContract_UpdateExt_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/UpdateExtEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CreditTranSvcContract_UpdateExt_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsContactTracker">
+      <wsdl:input wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetRowsContactTracker" message="tns:CreditTranSvcContract_GetRowsContactTracker_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetRowsContactTrackerResponse" message="tns:CreditTranSvcContract_GetRowsContactTracker_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetRowsContactTrackerEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CreditTranSvcContract_GetRowsContactTracker_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsForCreditCard">
+      <wsdl:input wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetRowsForCreditCard" message="tns:CreditTranSvcContract_GetRowsForCreditCard_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetRowsForCreditCardResponse" message="tns:CreditTranSvcContract_GetRowsForCreditCard_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:CreditTran/CreditTranSvcContract/GetRowsForCreditCardEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:CreditTranSvcContract_GetRowsForCreditCard_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

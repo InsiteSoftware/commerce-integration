@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ca14e9cc-aea9-4151-92ee-229ed28b650a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CashGrp.xsd" MetadataType="Schema" ID="be6c1e32-24f0-48e5-b9a6-9d0abd24de1e" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd5" />
+    <MetadataFile FileName="CashGrp1.xsd" MetadataType="Schema" ID="ecfe3bb6-101e-4625-ab30-4a8abcab9fc4" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd3" />
+    <MetadataFile FileName="CashGrp2.xsd" MetadataType="Schema" ID="4d29e6d9-9d0d-4e1c-aa36-102d64e729b1" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd2" />
+    <MetadataFile FileName="CashGrp3.xsd" MetadataType="Schema" ID="f3af4c33-1ccf-4c5a-a772-f707a0d1a0a8" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd1" />
+    <MetadataFile FileName="CashGrp4.xsd" MetadataType="Schema" ID="47f77c16-a8ed-4f01-b550-a4937bfe9c65" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd0" />
+    <MetadataFile FileName="CashGrp5.xsd" MetadataType="Schema" ID="9f25aa07-68e1-41ac-bd43-d569db3f6357" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd6" />
+    <MetadataFile FileName="CashGrp.wsdl" MetadataType="Wsdl" ID="f1b36b37-4f6f-43be-a235-0edb24be05fe" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CashGrp6.xsd" MetadataType="Schema" ID="0496eff3-7e96-4b0c-a8b4-3d06cd56c082" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?xsd=xsd4" />
+    <MetadataFile FileName="CashGrp.disco" MetadataType="Disco" ID="a92c1822-a14f-4e12-8f1e-cf7ff1959f0a" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?disco" />
+    <MetadataFile FileName="CashGrpSvcFacade.wsdl" MetadataType="Wsdl" ID="21a50a08-24a5-41cc-b7da-4fd0a3c44f59" SourceId="1" SourceUrl="http://vst-epicor10/ERP100500/Erp/BO/CashGrp.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

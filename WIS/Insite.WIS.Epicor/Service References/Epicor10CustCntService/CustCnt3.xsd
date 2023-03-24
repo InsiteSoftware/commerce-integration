@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Erp:BO:CustCnt" elementFormDefault="qualified" targetNamespace="Erp:BO:CustCnt" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CustCnt.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" />
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CustCnt.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CustCnt.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://vst-epicor10/ERP100500/Erp/BO/CustCnt.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+  <xs:element name="GetNewCustCnt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q1:CustCntTableset" />
+        <xs:element minOccurs="0" name="custNum" type="xs:int" />
+        <xs:element minOccurs="0" name="shipToNum" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCustCntResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q2:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCustCntAttch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q3:CustCntTableset" />
+        <xs:element minOccurs="0" name="custNum" type="xs:int" />
+        <xs:element minOccurs="0" name="shipToNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewCustCntAttchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q4:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="custNum" type="xs:int" />
+        <xs:element minOccurs="0" name="shipToNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteByIDResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="custNum" type="xs:int" />
+        <xs:element minOccurs="0" name="shipToNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetByIDResult" nillable="true" type="q5:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="whereClause" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="absolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetListResult" nillable="true" type="q6:CustCntListTableset" />
+        <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRows">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="whereClauseCustCnt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseCustCntAttch" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="absolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRowsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetRowsResult" nillable="true" type="q7:CustCntTableset" />
+        <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="id" type="q8:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetBySysRowIDResult" nillable="true" type="q9:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q10:ArrayOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetBySysRowIDsResult" nillable="true" type="q11:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q12:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q13:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q14:UpdExtCustCntTableset" />
+        <xs:element minOccurs="0" name="continueProcessingOnError" type="xs:boolean" />
+        <xs:element minOccurs="0" name="rollbackParentOnChildError" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Ice" minOccurs="0" name="UpdateExtResult" nillable="true" type="q15:BOUpdErrorTableset" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q16:UpdExtCustCntTableset" />
+        <xs:element minOccurs="0" name="errorsOccurred" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustCntGlobalFields">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustNum" type="xs:int" />
+        <xs:element minOccurs="0" name="ShiptoNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ConNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustCntGlobalFieldsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCustCntGlobalFieldsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckEFFieldLength">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vCustNum" type="xs:int" />
+        <xs:element minOccurs="0" name="vShipToNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vConNum" type="xs:int" />
+        <xs:element minOccurs="0" name="vName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vAddress1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vAddress2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vAddress3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vCity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vState" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vCorpName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vFirstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vMiddleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vLastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vInitials" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckEFFieldLengthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DefaultName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="targetField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="custNum" type="xs:int" />
+        <xs:element minOccurs="0" name="shipToNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conNum" type="xs:int" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q17:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DefaultNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q18:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGlbCustCntList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inCompany" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inGlbCompany" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inGlbCustNum" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="absolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGlbCustCntListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetGlbCustCntListResult" nillable="true" type="q19:GlbCustCntTableset" />
+        <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPerConData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PerConID" type="xs:int" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q20:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPerConDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q21:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkGlbCustCnt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="glbCompany" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="glbCustNum" type="xs:int" />
+        <xs:element minOccurs="0" name="glbShipToNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="glbConNum" type="xs:int" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q22:GlbCustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkGlbCustCntResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="LinkGlbCustCntResult" nillable="true" type="q23:CustCntTableset" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q24:GlbCustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnChangeAltShipToContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iProposedMasterCustID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="iProposedMasterShipToNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="iProposedMasterConNum" type="xs:int" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q25:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnChangeAltShipToContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q26:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpecialAddressChange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q27:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SpecialAddressChangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q28:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateECCCustCnt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q29:CustCntTableset" />
+        <xs:element minOccurs="0" name="updateCustCnt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateECCCustCntResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q30:CustCntTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

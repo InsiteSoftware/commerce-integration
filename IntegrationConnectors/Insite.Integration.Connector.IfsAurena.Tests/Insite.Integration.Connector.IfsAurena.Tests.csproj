@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Insite.Core.Interfaces\Insite.Core.Interfaces.csproj" />
+    <ProjectReference Include="..\..\..\Core\Insite.Core.TestHelpers\Insite.Core.TestHelpers.csproj" />
+    <ProjectReference Include="..\..\Insite.Plugins\Insite.Plugins.csproj" />
+    <ProjectReference Include="..\Insite.Integration.Connector.IfsAurena\Insite.Integration.Connector.IfsAurena.csproj" />
+  </ItemGroup>
+</Project>

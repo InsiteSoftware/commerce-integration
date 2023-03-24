@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Insite.WindowsIntegrationPlugins.Epicor.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Insite_WindowsIntegrationPlugins_Epicor_Epicor9BomSearchService_BomSearchService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.98.33/EpicorServices/BomSearchService.asmx</Value>
+    </Setting>
+    <Setting Name="Insite_WindowsIntegrationPlugins_Epicor_Epicor9ConfiguratorService_ConfiguratorService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.98.33/EpicorServices/ConfiguratorService.asmx</Value>
+    </Setting>
+    <Setting Name="Insite_WindowsIntegrationPlugins_Epicor_Epicor9DynamicQueryService_DynamicQueryService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.98.33/EpicorServices/DynamicQueryService.asmx</Value>
+    </Setting>
+    <Setting Name="Insite_WindowsIntegrationPlugins_Epicor_Epicor9PartService_PartService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.98.33/EpicorServices/PartService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

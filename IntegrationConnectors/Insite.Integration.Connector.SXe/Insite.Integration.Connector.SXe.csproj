@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="V10\SXeSoapServiceV10.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="V61\SXeSoapServiceV61.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Insite.Common\Insite.Common.csproj" />
+    <ProjectReference Include="..\..\..\Core\Insite.Core.Interfaces\Insite.Core.Interfaces.csproj" />
+    <ProjectReference Include="..\..\..\Core\Integration\Insite.Integration.WebService\Insite.Integration.WebService.csproj" />
+    <ProjectReference Include="..\..\..\Core\Integration\Insite.Integration\Insite.Integration.csproj" />
+    <ProjectReference Include="..\..\..\Data\Insite.Data.Entities\Insite.Data.Entities.csproj" />
+    <ProjectReference Include="..\..\..\Data\Insite.Data.Repositories\Insite.Data.Repositories.csproj" />
+    <ProjectReference Include="..\..\..\Data\Insite.Data\Insite.Data.csproj" />
+    <ProjectReference Include="..\Insite.Integration.Connector.Base\Insite.Integration.Connector.Base.csproj" />
+    <ProjectReference Include="..\..\..\Modules\RealTimeInventory\Insite.RealTimeInventory\Insite.RealTimeInventory.csproj" />
+    <ProjectReference Include="..\..\..\Modules\RealTimePricing\Insite.RealTimePricing\Insite.RealTimePricing.csproj" />
+    <ProjectReference Include="..\..\..\Public\Insite.Public.Core\Insite.Public.Core.csproj" />
+    <ProjectReference Include="..\..\..\Public\Insite.Public.Integration\Insite.Public.Integration.csproj" />
+    <ProjectReference Include="..\..\PaymentGateways\Cenpos\Insite.PaymentGateway.Cenpos.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="JobDefinitions\SXe.json" />
+  </ItemGroup>
+</Project>
